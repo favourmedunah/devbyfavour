@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="DevByFavour - Professional Web Designer based in Benin City, Nigeria. Building futuristic websites for modern businesses."/>
+  <meta name="keywords" content="web designer Nigeria, website design Benin City, professional web developer, AI website Nigeria"/>
+  <meta property="og:title" content="DevByFavour | Professional Web Designer"/>
+  <meta property="og:description" content="Building futuristic websites for modern businesses in Nigeria"/>
+  <title>DevByFavour | Professional Web Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* ==========================================
+   DEVBYFAVOUR - COMPLETE WEBSITE
+   ========================================== */
+
+:root {
+  --bg-primary: #050816;
+  --bg-secondary: #0A0F2C;
+  --bg-card: #0D1533;
+  --blue: #2563EB;
+  --glow: #38BDF8;
+  --silver: #CBD5E1;
+  --white: #FFFFFF;
+  --border: rgba(56, 189, 248, 0.15);
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--silver);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 18px 0;
+  background: rgba(5, 8, 22, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--white);
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-shadow: 0 0 20px rgba(56,189,248,0.5);
+}
+
+.logo span { color: var(--glow); }
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--silver);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--glow);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover { color: var(--glow); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-cta {
+  background: linear-gradient(135deg, var(--blue), var(--glow));
+  color: var(--white) !important;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 700 !important;
+  box-shadow: 0 0 15px rgba(56,189,248,0.3);
+}
+
+.nav-cta:hover {
+  box-shadow: 0 0 30px rgba(56,189,248,0.6) !important;
+  transform: translateY(-2px);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background: var(--glow);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: rgba(5, 8, 22, 0.98);
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+  z-index: 999;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-menu a {
+  color: var(--silver);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mobile-menu a:hover { color: var(--glow); }
+
+/* --- HERO --- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 20px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+}
+
+.hero-left { flex: 1; }
+
+.hero-tag {
+  font-size: 14px;
+  color: var(--glow);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-tag::before {
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: var(--glow);
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 52px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.hero-title .gradient-text {
+  background: linear-gradient(135deg, var(--blue), var(--glow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.typing-container {
+  font-family: var(--font-heading);
+  font-size: 52px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 20px;
+  min-height: 60px;
+}
+
+#typing-text {
+  background: linear-gradient(135deg, var(--blue), var(--glow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cursor {
+  color: var(--glow);
+  animation: blink 0.8s infinite;
+  -webkit-text-fill-color: var(--glow);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.hero-desc {
+  font-size: 17px;
+  color: var(--silver);
+  margin-bottom: 40px;
+  max-width: 500px;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--blue), var(--glow));
+  color: var(--white);
+  padding: 14px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  box-shadow: 0 0 20px rgba(56,189,248,0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(56,189,248,0.6);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--glow);
+  padding: 14px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 2px solid var(--glow);
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-secondary:hover {
+  background: var(--glow);
+  color: var(--bg-primary);
+  transform: translateY(-3px);
+}
+
+/* --- HERO RIGHT --- */
+.hero-right {
+  flex: 0 0 400px;
+  position: relative;
+}
+
+.hero-mockup {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 25px;
+  animation: float 3s ease-in-out infinite;
+  box-shadow: 0 0 40px rgba(37,99,235,0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-mockup::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue), var(--glow));
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+.mockup-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.mockup-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.mockup-dot:nth-child(1) { background: #FF5F57; }
+.mockup-dot:nth-child(2) { background: #FEBC2E; }
+.mockup-dot:nth-child(3) { background: #28C840; }
+
+.mockup-code {
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.code-line { margin-bottom: 4px; }
+.code-tag { color: var(--blue); }
+.code-attr { color: var(--glow); }
+.code-val { color: #A5D6A7; }
+.code-text { color: var(--silver); }
+.code-comment { color: #546E7A; }
+
+.mockup-preview {
+  margin-top: 20px;
+  background: var(--bg-secondary);
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid var(--border);
+}
+
+.preview-nav {
+  height: 8px;
+  background: linear-gradient(90deg, var(--blue), var(--glow));
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.preview-hero {
+  height: 40px;
+  background: linear-gradient(135deg, rgba(37,99,235,0.3), rgba(56,189,248,0.1));
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.preview-cards {
+  display: flex;
+  gap: 6px;
+}
+
+.preview-card {
+  flex: 1;
+  height: 25px;
+  background: var(--bg-card);
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+/* --- CANVAS PARTICLES --- */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero, .navbar { position: relative; z-index: 1; }
+
+/* --- SECTION STYLES --- */
+section { position: relative; z-index: 1; }
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 900;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.section-title span {
+  background: linear-gradient(135deg, var(--blue), var(--glow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-sub {
+  text-align: center;
+  color: var(--silver);
+  font-size: 17px;
+  margin-bottom: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- STATS --- */
+.stats {
+  padding: 60px 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--blue), var(--glow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.stat-item p {
+  color: var(--silver);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* --- SERVICES --- */
+.services {
+  padding: 100px 0;
+  background: var(--bg-primary);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 35px 25px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), var(--glow));
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.service-card:hover::before { transform: scaleX(1); }
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(56,189,248,0.4);
+  box-shadow: 0 20px 40px rgba(37,99,235,0.2),
+              0 0 20px rgba(56,189,248,0.1);
+}
+
+.service-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.service-card h3 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  color: var(--white);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.service-card p {
+  color: var(--silver);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* --- PROJECTS --- */
+.projects {
+  padding: 100px 0;
+  background: var(--bg-secondary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(56,189,248,0.4);
+  box-shadow: 0 20px 40px rgba(37,99,235,0.2);
+}
+
+.project-image {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image.food {
+  background: linear-gradient(135deg, #1a0a0a, #2d1b00);
+}
+
+.project-image.security {
+  background: linear-gradient(135deg, #0a0a1a, #001a2d);
+}
+
+.project-image.ecommerce {
+  background: linear-gradient(135deg, #0a1a0a, #001a0d);
+}
+
+.project-icon {
+  font-size: 60px;
+  opacity: 0.8;
+}
+
+.coming-soon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 8, 22, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  backdrop-filter: blur(3px);
+}
+
+.coming-soon-badge {
+  background: linear-gradient(135deg, var(--blue), var(--glow));
+  color: var(--white);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.coming-soon-overlay i {
+  font-size: 30px;
+  color: var(--glow);
+  opacity: 0.7;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h3 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  color: var(--white);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.project-info p {
+  color: var(--silver);
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.project-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: rgba(37,99,235,0.15);
+  color: var(--glow);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  border: 1px solid rgba(56,189,248,0.2);
+  letter-spacing: 1px;
+}
+
+/* --- PRICING --- */
+.pricing {
+  padding: 100px 0;
+  background: var(--bg-primary);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  align-items: center;
+}
+
+.pricing-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px 30px;
+  transition: all 0.3s;
+  position: relative;
+  text-align: center;
+}
+
+.pricing-card.popular {
+  border-color: var(--glow);
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(56,189,248,0.2);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--blue), var(--glow));
+  color: var(--white);
+  padding: 6px 20px;
+  border-radius: 50px;
+  font-family: var(--font-heading);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(37,99,235,0.2);
+}
+
+.pricing-card.popular:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.pricing-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.pricing-name {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  color: var(--white);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.pricing-price {
+  margin-bottom: 25px;
+}
+
+.pricing-price .amount {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--blue), var(--glow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pricing-price .currency {
+  font-size: 20px;
+  color: var(--glow);
+  font-weight: 700;
+}
+
+.pricing-features {
+  list-style: none;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.pricing-features li {
+  color: var(--silver);
+  font-size: 14px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pricing-features li i {
+  color: var(--glow);
+  font-size: 12px;
+}
+
+.btn-pricing {
+  display: block;
+  background: linear-gradient(135deg, var(--blue), var(--glow));
+  color: var(--white);
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  box-shadow: 0 0 20px rgba(56,189,248,0.2);
+}
+
+.btn-pricing:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(56,189,248,0.5);
+}
+
+/* --- TESTIMONIALS --- */
+.testimonials {
+  padding: 100px 0;
+  background: var(--bg-secondary);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 80px;
+  color: var(--blue);
+  opacity: 0.2;
+  font-family: serif;
+  line-height: 1;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(56,189,248,0.3);
+  box-shadow: 0 20px 40px rgba(37,99,235,0.15);
+}
+
+.stars {
+  color: #FFD700;
+  font-size: 14px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.testimonial-text {
+  color: var(--silver);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.author-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), var(--glow));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.author-info h4 {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  color: var(--white);
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+
+.author-info p {
+  color: var(--glow);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* --- CONTACT --- */
+.contact {
+  padding: 100px 0;
+  background: var(--bg-primary);
+  text-align: center;
+}
+
+.contact-cards {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 35px 30px;
+  min-width: 200px;
+  transition: all 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(56,189,248,0.4);
+  box-shadow: 0 20px 40px rgba(37,99,235,0.2);
+}
+
+.contact-icon {
+  font-size: 35px;
+  margin-bottom: 15px;
+  color: var(--glow);
+}
+
+.contact-card h3 {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  color: var(--glow);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.contact-card p {
+  color: var(--silver);
+  font-size: 14px;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: var(--white);
+  padding: 16px 45px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  box-shadow: 0 0 20px rgba(37,211,102,0.3);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(37,211,102,0.6);
+}
+
+/* --- FLOATING WHATSAPP --- */
+.float-whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+  z-index: 999;
+  box-shadow: 0 0 20px rgba(37,211,102,0.4);
+  animation: pulse 2s infinite;
+  transition: all 0.3s;
+}
+
+.float-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(37,211,102,0.7);
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(37,211,102,0.4); }
+  50% { box-shadow: 0 0 40px rgba(37,211,102,0.8); }
+}
+
+/* --- FOOTER --- */
+.footer {
+  padding: 60px 0 30px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-brand .logo {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.footer-brand p {
+  color: var(--silver);
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 280px;
+}
+
+.footer-title {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  color: var(--white);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: var(--silver);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover { color: var(--glow); }
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-bottom p {
+  color: var(--silver);
+  font-size: 13px;
+}
+
+.footer-bottom span { color: var(--glow); }
+
+/* --- ANIMATIONS --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-tag { justify-content: center; }
+  .hero-title { font-size: 32px; }
+  .typing-container { font-size: 28px; }
+  .hero-desc { margin: 0 auto 30px; }
+  .hero-buttons { justify-content: center; }
+  .hero-right { flex: unset; width: 100%; max-width: 350px; }
+
+  .section-title { font-size: 26px; }
+
+  .stats-grid { gap: 30px; }
+  .stat-item h3 { font-size: 32px; }
+
+  .pricing-card.popular { transform: scale(1); }
+  .pricing-card.popular:hover { transform: translateY(-5px); }
+
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/2348057871328" class="float-whatsapp" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- PARTICLES -->
+<canvas id="particles"></canvas>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <a href="#home" class="logo">Dev<span>By</span>Favour</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://wa.me/2348057871328" class="nav-cta" target="_blank">Hire Me</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#projects">Projects</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#contact">Contact</a>
+  <a href="https://wa.me/2348057871328" target="_blank">💬 Hire Me on WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-left">
+      <p class="hero-tag">👋 Hello, I am Favour Medunah</p>
+      <h1 class="hero-title">Building Futuristic<br>Websites For</h1>
+      <div class="typing-container">
+        <span id="typing-text"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-desc">I design and build stunning, fast and modern websites that help businesses grow and dominate online — powered by AI and cutting-edge design. Based in Benin City, Nigeria.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/2348057871328" class="btn-primary" target="_blank">
+          <i class="fas fa-rocket"></i> Hire Me Now
+        </a>
+        <a href="#projects" class="btn-secondary">
+          <i class="fas fa-eye"></i> View Projects
+        </a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-mockup">
+        <div class="mockup-bar">
+          <div class="mockup-dot"></div>
+          <div class="mockup-dot"></div>
+          <div class="mockup-dot"></div>
+        </div>
+        <div class="mockup-code">
+          <div class="code-line"><span class="code-comment">// DevByFavour</span></div>
+          <div class="code-line"><span class="code-tag">&lt;section</span> <span class="code-attr">class</span>=<span class="code-val">"hero"</span><span class="code-tag">&gt;</span></div>
+          <div class="code-line">&nbsp;&nbsp;<span class="code-tag">&lt;h1&gt;</span><span class="code-text">Your Vision,</span><span class="code-tag">&lt;/h1&gt;</span></div>
+          <div class="code-line">&nbsp;&nbsp;<span class="code-tag">&lt;h2&gt;</span><span class="code-text">My Code.</span><span class="code-tag">&lt;/h2&gt;</span></div>
+          <div class="code-line">&nbsp;&nbsp;<span class="code-tag">&lt;p&gt;</span><span class="code-text">Premium Design</span><span class="code-tag">&lt;/p&gt;</span></div>
+          <div class="code-line"><span class="code-tag">&lt;/section&gt;</span></div>
+        </div>
+        <div class="mockup-preview">
+          <div class="preview-nav"></div>
+          <div class="preview-hero"></div>
+          <div class="preview-cards">
+            <div class="preview-card"></div>
+            <div class="preview-card"></div>
+            <div class="preview-card"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-in">
+        <h3>5+</h3>
+        <p>Projects Done</p>
+      </div>
+      <div class="stat-item fade-in">
+        <h3>3+</h3>
+        <p>Happy Clients</p>
+      </div>
+      <div class="stat-item fade-in">
+        <h3>100%</h3>
+        <p>Satisfaction</p>
+      </div>
+      <div class="stat-item fade-in">
+        <h3>24/7</h3>
+        <p>Support</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <h2 class="section-title">What I <span>Do</span></h2>
+    <p class="section-sub">Professional web solutions tailored to help your business grow online</p>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <span class="service-icon">🌐</span>
+        <h3>Website Design</h3>
+        <p>Beautiful, responsive websites built from scratch that work perfectly on all devices and screens.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">🤖</span>
+        <h3>AI-Powered Websites</h3>
+        <p>Modern websites enhanced with artificial intelligence for smarter, more engaging user experiences.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">📱</span>
+        <h3>Mobile-First Design</h3>
+        <p>Websites designed for mobile first, ensuring a perfect experience on every screen size.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">🚀</span>
+        <h3>Landing Pages</h3>
+        <p>High-converting landing pages that turn visitors into paying customers fast.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">🔍</span>
+        <h3>SEO Optimization</h3>
+        <p>Get found on Google. I optimize your website so your customers can find you easily online.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">🛠️</span>
+        <h3>Website Maintenance</h3>
+        <p>Keep your website running smoothly with regular updates, fixes and performance improvements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="container">
+    <h2 class="section-title">My <span>Projects</span></h2>
+    <p class="section-sub">Real projects currently in development — launching very soon!</p>
+    <div class="projects-grid">
+
+      <div class="project-card fade-in">
+        <div class="project-image food">
+          <span class="project-icon">🍔</span>
+          <div class="coming-soon-overlay">
+            <i class="fas fa-lock"></i>
+            <div class="coming-soon-badge">Coming Soon</div>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>LagosEats</h3>
+          <p>A modern food delivery website for a Lagos-based restaurant chain with online ordering.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-image security">
+          <span class="project-icon">🛡️</span>
+          <div class="coming-soon-overlay">
+            <i class="fas fa-lock"></i>
+            <div class="coming-soon-badge">Coming Soon</div>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>GuardForce Nigeria</h3>
+          <p>Professional security company website with service listings and client contact system.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-image ecommerce">
+          <span class="project-icon">🛒</span>
+          <div class="coming-soon-overlay">
+            <i class="fas fa-lock"></i>
+            <div class="coming-soon-badge">Coming Soon</div>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>ShopNaija</h3>
+          <p>A vibrant Nigerian e-commerce landing page with product showcase and payment integration.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <h2 class="section-title">My <span>Pricing</span></h2>
+    <p class="section-sub">Transparent and affordable pricing for every business size</p>
+    <div class="pricing-grid">
+
+      <div class="pricing-card fade-in">
+        <div class="pricing-icon">⚡</div>
+        <div class="pricing-name">STARTER</div>
+        <div class="pricing-price">
+          <span class="currency">₦</span>
+          <span class="amount">25,000</span>
+        </div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> Single Landing Page</li>
+          <li><i class="fas fa-check"></i> Mobile Responsive</li>
+          <li><i class="fas fa-check"></i> Contact Form</li>
+          <li><i class="fas fa-check"></i> Basic SEO Setup</li>
+          <li><i class="fas fa-check"></i> 7 Days Support</li>
+        </ul>
+        <a href="https://wa.me/2348057871328" class="btn-pricing" target="_blank">Get Started</a>
+      </div>
+
+      <div class="pricing-card popular fade-in">
+        <div class="popular-badge">⭐ Most Popular</div>
+        <div class="pricing-icon">🚀</div>
+        <div class="pricing-name">BUSINESS</div>
+        <div class="pricing-price">
+          <span class="currency">₦</span>
+          <span class="amount">60,000</span>
+        </div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> Up to 5 Pages</li>
+          <li><i class="fas fa-check"></i> Mobile Responsive</li>
+          <li><i class="fas fa-check"></i> Contact Form</li>
+          <li><i class="fas fa-check"></i> Full SEO Setup</li>
+          <li><i class="fas fa-check"></i> WhatsApp Integration</li>
+          <li><i class="fas fa-check"></i> 30 Days Support</li>
+        </ul>
+        <a href="https://wa.me/2348057871328" class="btn-pricing" target="_blank">Get Started</a>
+      </div>
+
+      <div class="pricing-card fade-in">
+        <div class="pricing-icon">💎</div>
+        <div class="pricing-name">PREMIUM</div>
+        <div class="pricing-price">
+          <span class="currency">₦</span>
+          <span class="amount">120,000</span>
+        </div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> Unlimited Pages</li>
+          <li><i class="fas fa-check"></i> AI-Powered Features</li>
+          <li><i class="fas fa-check"></i> Advanced Animations</li>
+          <li><i class="fas fa-check"></i> Full SEO + Analytics</li>
+          <li><i class="fas fa-check"></i> Payment Integration</li>
+          <li><i class="fas fa-check"></i> 90 Days Support</li>
+        </ul>
+        <a href="https://wa.me/2348057871328" class="btn-pricing" target="_blank">Get Started</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <h2 class="section-title">Client <span>Reviews</span></h2>
+    <p class="section-sub">What my clients say about working with me</p>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card fade-in">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Favour built us an incredible website that completely transformed our online presence. Professional, fast, and very easy to work with. Highly recommend!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">CO</div>
+          <div class="author-info">
+            <h4>Chukwuemeka Obi</h4>
+            <p>Business Owner — Lagos</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The website Favour created for my business exceeded all my expectations. It looks amazing on my phone and my customers love it. Worth every naira!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AS</div>
+          <div class="author-info">
+            <h4>Amina Suleiman</h4>
+            <p>Entrepreneur — Abuja</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Very talented designer! Favour understood exactly what I wanted and delivered a modern, beautiful website on time. I will definitely use DevByFavour again!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">BE</div>
+          <div class="author-info">
+            <h4>Blessing Eze</h4>
+            <p>CEO — Port Harcourt</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+    <p class="section-sub">Ready to build something amazing? Let's talk about your project today!</p>
+    <div class="contact-cards">
+      <div class="contact-card fade-in">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <h3>Email</h3>
+        <p>devbyfavour@gmail.com</p>
+      </div>
+      <div class="contact-card fade-in">
+        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+        <h3>WhatsApp</h3>
+        <p>+2348057871328</p>
+      </div>
+      <div class="contact-card fade-in">
+        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h3>Location</h3>
+        <p>Benin City, Edo State, Nigeria</p>
+      </div>
+    </div>
+    <a href="https://wa.me/2348057871328" class="btn-whatsapp" target="_blank">
+      <i class="fab fa-whatsapp"></i> Start Your Project on WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo">Dev<span>By</span>Favour</a>
+        <p>Building futuristic websites for modern businesses in Nigeria. Professional web design powered by AI and cutting-edge technology.</p>
+      </div>
+      <div>
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Website Design</a></li>
+          <li><a href="#services">AI Websites</a></li>
+          <li><a href="#services">Landing Pages</a></li>
+          <li><a href="#services">SEO Setup</a></li>
+          <li><a href="#services">Maintenance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 <span>DevByFavour</span>. All rights reserved.</p>
+      <p>Built with 💙 in <span>Benin City, Nigeria</span></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ==========================================
+// DEVBYFAVOUR - COMPLETE JAVASCRIPT
+// ==========================================
+
+// --- PARTICLES ---
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
+const particlesArray = [];
+const numberOfParticles = 70;
+
+class Particle {
+  constructor() { this.reset(); }
+  reset() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 2 + 0.5;
+    this.speedX = (Math.random() - 0.5) * 0.4;
+    this.speedY = (Math.random() - 0.5) * 0.4;
+    this.opacity = Math.random() * 0.4 + 0.1;
+    this.color = Math.random() > 0.5 ? '56, 189, 248' : '37, 99, 235';
+  }
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+  }
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
+    ctx.fill();
+    particlesArray.forEach(other => {
+      const dx = this.x - other.x;
+      const dy = this.y - other.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      if (distance < 100) {
+        ctx.beginPath();
+        ctx.strokeStyle = `rgba(56, 189, 248, ${0.06 * (1 - distance / 100)})`;
+        ctx.lineWidth = 0.5;
+        ctx.moveTo(this.x, this.y);
+        ctx.lineTo(other.x, other.y);
+        ctx.stroke();
+      }
+    });
+  }
+}
+
+for (let i = 0; i < numberOfParticles; i++) {
+  particlesArray.push(new Particle());
+}
+
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particlesArray.forEach(p => { p.update(); p.draw(); });
+  requestAnimationFrame(animateParticles);
+}
+animateParticles();
+
+// --- TYPING ANIMATION ---
+const typingEl = document.getElementById('typing-text');
+const words = [
+  'Modern Businesses',
+  'Nigerian Brands',
+  'Startups & SMEs',
+  'Your Business'
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function type() {
+  const currentWord = words[wordIndex];
+  if (isDeleting) {
+    typingEl.textContent = currentWord.substring(0, charIndex - 1);
+    charIndex--;
+  } else {
+    typingEl.textContent = currentWord.substring(0, charIndex + 1);
+    charIndex++;
+  }
+  let typeSpeed = isDeleting ? 60 : 100;
+  if (!isDeleting && charIndex === currentWord.length) {
+    typeSpeed = 2000;
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    wordIndex = (wordIndex + 1) % words.length;
+    typeSpeed = 400;
+  }
+  setTimeout(type, typeSpeed);
+}
+type();
+
+// --- HAMBURGER MENU ---
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+let menuOpen = false;
+
+hamburger.addEventListener('click', () => {
+  menuOpen = !menuOpen;
+  mobileMenu.style.display = menuOpen ? 'flex' : 'none';
+});
+
+// Close menu on link click
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuOpen = false;
+    mobileMenu.style.display = 'none';
+  });
+});
+
+// --- SMOOTH SCROLL ---
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+// --- FADE IN ON SCROLL ---
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// --- ACTIVE NAV ON SCROLL ---
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 100) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach(link => {
+    link.style.color = '';
+    if (link.getAttribute('href') === `#${current}`) {
+      link.style.color = '#38BDF8';
+    }
+  });
+});
+</script>
+
+</body>
+</html>
