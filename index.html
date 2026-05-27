@@ -1,1666 +1,1127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="DevByFavour - Professional Web Designer based in Benin City, Nigeria. Building futuristic websites for modern businesses."/>
-  <meta name="keywords" content="web designer Nigeria, website design Benin City, professional web developer, AI website Nigeria"/>
-  <meta property="og:title" content="DevByFavour | Professional Web Designer"/>
-  <meta property="og:description" content="Building futuristic websites for modern businesses in Nigeria"/>
-  <title>DevByFavour | Professional Web Designer</title>
+  <meta name="description" content="DevByFavour – Premium Web Designer & AI Developer based in Benin City, Nigeria. Futuristic websites, AI-powered web apps, SEO, eCommerce & landing pages."/>
+  <meta name="keywords" content="web designer Nigeria, AI developer Benin City, futuristic website design, DevByFavour, Favour Medunah"/>
+  <meta property="og:title" content="DevByFavour | Premium Web Designer & AI Developer"/>
+  <meta property="og:description" content="Award-winning web design powered by AI. Building futuristic digital experiences from Benin City, Nigeria."/>
+  <title>DevByFavour | Premium Web Designer & AI Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-/* ==========================================
-   DEVBYFAVOUR - COMPLETE WEBSITE
-   ========================================== */
-
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
 :root {
-  --bg-primary: #050816;
-  --bg-secondary: #0A0F2C;
-  --bg-card: #0D1533;
-  --blue: #2563EB;
-  --glow: #38BDF8;
-  --silver: #CBD5E1;
-  --white: #FFFFFF;
-  --border: rgba(56, 189, 248, 0.15);
-  --font-heading: 'Orbitron', sans-serif;
-  --font-body: 'Inter', sans-serif;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
-body {
-  background-color: var(--bg-primary);
-  color: var(--silver);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* --- NAVBAR --- */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 18px 0;
-  background: rgba(5, 8, 22, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-  transition: all 0.3s;
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-family: var(--font-heading);
-  font-size: 20px;
-  font-weight: 900;
-  color: var(--white);
-  letter-spacing: 2px;
-  text-decoration: none;
-  text-shadow: 0 0 20px rgba(56,189,248,0.5);
-}
-
-.logo span { color: var(--glow); }
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-  align-items: center;
-}
-
-.nav-links a {
-  color: var(--silver);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: color 0.3s;
-  position: relative;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--glow);
-  transition: width 0.3s;
-}
-
-.nav-links a:hover { color: var(--glow); }
-.nav-links a:hover::after { width: 100%; }
-
-.nav-cta {
-  background: linear-gradient(135deg, var(--blue), var(--glow));
-  color: var(--white) !important;
-  padding: 8px 20px;
-  border-radius: 50px;
-  font-weight: 700 !important;
-  box-shadow: 0 0 15px rgba(56,189,248,0.3);
-}
-
-.nav-cta:hover {
-  box-shadow: 0 0 30px rgba(56,189,248,0.6) !important;
-  transform: translateY(-2px);
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 2px;
-  background: var(--glow);
-  border-radius: 2px;
-  transition: all 0.3s;
-}
-
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  background: rgba(5, 8, 22, 0.98);
-  padding: 20px;
-  border-bottom: 1px solid var(--border);
-  z-index: 999;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.mobile-menu a {
-  color: var(--silver);
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.mobile-menu a:hover { color: var(--glow); }
-
-/* --- HERO --- */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 120px 20px 80px;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  width: 100%;
-}
-
-.hero-left { flex: 1; }
-
-.hero-tag {
-  font-size: 14px;
-  color: var(--glow);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.hero-tag::before {
-  content: '';
-  width: 30px;
-  height: 2px;
-  background: var(--glow);
-}
-
-.hero-title {
-  font-family: var(--font-heading);
-  font-size: 52px;
-  font-weight: 900;
-  color: var(--white);
-  line-height: 1.1;
-  margin-bottom: 20px;
-  letter-spacing: -1px;
-}
-
-.hero-title .gradient-text {
-  background: linear-gradient(135deg, var(--blue), var(--glow));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.typing-container {
-  font-family: var(--font-heading);
-  font-size: 52px;
-  font-weight: 900;
-  color: var(--white);
-  line-height: 1.1;
-  margin-bottom: 20px;
-  min-height: 60px;
-}
-
-#typing-text {
-  background: linear-gradient(135deg, var(--blue), var(--glow));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.cursor {
-  color: var(--glow);
-  animation: blink 0.8s infinite;
-  -webkit-text-fill-color: var(--glow);
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.hero-desc {
-  font-size: 17px;
-  color: var(--silver);
-  margin-bottom: 40px;
-  max-width: 500px;
-  line-height: 1.8;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, var(--blue), var(--glow));
-  color: var(--white);
-  padding: 14px 35px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: all 0.3s;
-  box-shadow: 0 0 20px rgba(56,189,248,0.3);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 40px rgba(56,189,248,0.6);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--glow);
-  padding: 14px 35px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  border: 2px solid var(--glow);
-  transition: all 0.3s;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.btn-secondary:hover {
-  background: var(--glow);
-  color: var(--bg-primary);
-  transform: translateY(-3px);
-}
-
-/* --- HERO RIGHT --- */
-.hero-right {
-  flex: 0 0 400px;
-  position: relative;
-}
-
-.hero-mockup {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 25px;
-  animation: float 3s ease-in-out infinite;
-  box-shadow: 0 0 40px rgba(37,99,235,0.2);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-mockup::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--blue), var(--glow));
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-}
-
-.mockup-bar {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 20px;
-}
-
-.mockup-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.mockup-dot:nth-child(1) { background: #FF5F57; }
-.mockup-dot:nth-child(2) { background: #FEBC2E; }
-.mockup-dot:nth-child(3) { background: #28C840; }
-
-.mockup-code {
-  font-family: monospace;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.code-line { margin-bottom: 4px; }
-.code-tag { color: var(--blue); }
-.code-attr { color: var(--glow); }
-.code-val { color: #A5D6A7; }
-.code-text { color: var(--silver); }
-.code-comment { color: #546E7A; }
-
-.mockup-preview {
-  margin-top: 20px;
-  background: var(--bg-secondary);
-  border-radius: 10px;
-  padding: 15px;
-  border: 1px solid var(--border);
-}
-
-.preview-nav {
-  height: 8px;
-  background: linear-gradient(90deg, var(--blue), var(--glow));
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.preview-hero {
-  height: 40px;
-  background: linear-gradient(135deg, rgba(37,99,235,0.3), rgba(56,189,248,0.1));
-  border-radius: 6px;
-  margin-bottom: 8px;
-}
-
-.preview-cards {
-  display: flex;
-  gap: 6px;
-}
-
-.preview-card {
-  flex: 1;
-  height: 25px;
-  background: var(--bg-card);
-  border-radius: 4px;
-  border: 1px solid var(--border);
-}
-
-/* --- CANVAS PARTICLES --- */
-#particles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.hero, .navbar { position: relative; z-index: 1; }
-
-/* --- SECTION STYLES --- */
-section { position: relative; z-index: 1; }
-
-.section-title {
-  font-family: var(--font-heading);
-  font-size: 38px;
-  font-weight: 900;
-  color: var(--white);
-  text-align: center;
-  margin-bottom: 15px;
-  letter-spacing: 2px;
-}
-
-.section-title span {
-  background: linear-gradient(135deg, var(--blue), var(--glow));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.section-sub {
-  text-align: center;
-  color: var(--silver);
-  font-size: 17px;
-  margin-bottom: 60px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* --- STATS --- */
-.stats {
-  padding: 60px 0;
-  background: var(--bg-secondary);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.stats-grid {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
-}
-
-.stat-item {
-  text-align: center;
-}
-
-.stat-item h3 {
-  font-family: var(--font-heading);
-  font-size: 42px;
-  font-weight: 900;
-  background: linear-gradient(135deg, var(--blue), var(--glow));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 8px;
-}
-
-.stat-item p {
-  color: var(--silver);
-  font-size: 14px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-/* --- SERVICES --- */
-.services {
-  padding: 100px 0;
-  background: var(--bg-primary);
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-.service-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 35px 25px;
-  transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--blue), var(--glow));
-  transform: scaleX(0);
-  transition: transform 0.3s;
-}
-
-.service-card:hover::before { transform: scaleX(1); }
-
-.service-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(56,189,248,0.4);
-  box-shadow: 0 20px 40px rgba(37,99,235,0.2),
-              0 0 20px rgba(56,189,248,0.1);
-}
-
-.service-icon {
-  font-size: 40px;
-  margin-bottom: 20px;
-  display: block;
-}
-
-.service-card h3 {
-  font-family: var(--font-heading);
-  font-size: 15px;
-  color: var(--white);
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-}
-
-.service-card p {
-  color: var(--silver);
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-/* --- PROJECTS --- */
-.projects {
-  padding: 100px 0;
-  background: var(--bg-secondary);
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-}
-
-.project-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  overflow: hidden;
-  transition: all 0.3s;
-  position: relative;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(56,189,248,0.4);
-  box-shadow: 0 20px 40px rgba(37,99,235,0.2);
-}
-
-.project-image {
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-image.food {
-  background: linear-gradient(135deg, #1a0a0a, #2d1b00);
-}
-
-.project-image.security {
-  background: linear-gradient(135deg, #0a0a1a, #001a2d);
-}
-
-.project-image.ecommerce {
-  background: linear-gradient(135deg, #0a1a0a, #001a0d);
-}
-
-.project-icon {
-  font-size: 60px;
-  opacity: 0.8;
-}
-
-.coming-soon-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(5, 8, 22, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 10px;
-  backdrop-filter: blur(3px);
-}
-
-.coming-soon-badge {
-  background: linear-gradient(135deg, var(--blue), var(--glow));
-  color: var(--white);
-  padding: 8px 20px;
-  border-radius: 50px;
-  font-family: var(--font-heading);
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.coming-soon-overlay i {
-  font-size: 30px;
-  color: var(--glow);
-  opacity: 0.7;
-}
-
-.project-info {
-  padding: 20px;
-}
-
-.project-info h3 {
-  font-family: var(--font-heading);
-  font-size: 15px;
-  color: var(--white);
-  margin-bottom: 8px;
-  letter-spacing: 1px;
-}
-
-.project-info p {
-  color: var(--silver);
-  font-size: 14px;
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
-
-.project-tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.tag {
-  background: rgba(37,99,235,0.15);
-  color: var(--glow);
-  padding: 4px 12px;
-  border-radius: 50px;
-  font-size: 12px;
-  border: 1px solid rgba(56,189,248,0.2);
-  letter-spacing: 1px;
-}
-
-/* --- PRICING --- */
-.pricing {
-  padding: 100px 0;
-  background: var(--bg-primary);
-}
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  align-items: center;
-}
-
-.pricing-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 40px 30px;
-  transition: all 0.3s;
-  position: relative;
-  text-align: center;
-}
-
-.pricing-card.popular {
-  border-color: var(--glow);
-  transform: scale(1.05);
-  box-shadow: 0 0 40px rgba(56,189,248,0.2);
-}
-
-.popular-badge {
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(135deg, var(--blue), var(--glow));
-  color: var(--white);
-  padding: 6px 20px;
-  border-radius: 50px;
-  font-family: var(--font-heading);
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.pricing-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(37,99,235,0.2);
-}
-
-.pricing-card.popular:hover {
-  transform: scale(1.05) translateY(-5px);
-}
-
-.pricing-icon {
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-
-.pricing-name {
-  font-family: var(--font-heading);
-  font-size: 16px;
-  color: var(--white);
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-}
-
-.pricing-price {
-  margin-bottom: 25px;
-}
-
-.pricing-price .amount {
-  font-family: var(--font-heading);
-  font-size: 42px;
-  font-weight: 900;
-  background: linear-gradient(135deg, var(--blue), var(--glow));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.pricing-price .currency {
-  font-size: 20px;
-  color: var(--glow);
-  font-weight: 700;
-}
-
-.pricing-features {
-  list-style: none;
-  margin-bottom: 30px;
-  text-align: left;
-}
-
-.pricing-features li {
-  color: var(--silver);
-  font-size: 14px;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.pricing-features li i {
-  color: var(--glow);
-  font-size: 12px;
-}
-
-.btn-pricing {
-  display: block;
-  background: linear-gradient(135deg, var(--blue), var(--glow));
-  color: var(--white);
-  padding: 14px 30px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-family: var(--font-heading);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: all 0.3s;
-  box-shadow: 0 0 20px rgba(56,189,248,0.2);
-}
-
-.btn-pricing:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 40px rgba(56,189,248,0.5);
-}
-
-/* --- TESTIMONIALS --- */
-.testimonials {
-  padding: 100px 0;
-  background: var(--bg-secondary);
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-.testimonial-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 30px;
-  transition: all 0.3s;
-  position: relative;
-}
-
-.testimonial-card::before {
-  content: '"';
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 80px;
-  color: var(--blue);
-  opacity: 0.2;
-  font-family: serif;
-  line-height: 1;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(56,189,248,0.3);
-  box-shadow: 0 20px 40px rgba(37,99,235,0.15);
-}
-
-.stars {
-  color: #FFD700;
-  font-size: 14px;
-  margin-bottom: 15px;
-  letter-spacing: 2px;
-}
-
-.testimonial-text {
-  color: var(--silver);
-  font-size: 15px;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  font-style: italic;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.author-avatar {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--blue), var(--glow));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--white);
-  flex-shrink: 0;
-}
-
-.author-info h4 {
-  font-family: var(--font-heading);
-  font-size: 13px;
-  color: var(--white);
-  letter-spacing: 1px;
-  margin-bottom: 3px;
-}
-
-.author-info p {
-  color: var(--glow);
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-/* --- CONTACT --- */
-.contact {
-  padding: 100px 0;
-  background: var(--bg-primary);
-  text-align: center;
-}
-
-.contact-cards {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 50px;
-}
-
-.contact-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 35px 30px;
-  min-width: 200px;
-  transition: all 0.3s;
-}
-
-.contact-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(56,189,248,0.4);
-  box-shadow: 0 20px 40px rgba(37,99,235,0.2);
-}
-
-.contact-icon {
-  font-size: 35px;
-  margin-bottom: 15px;
-  color: var(--glow);
-}
-
-.contact-card h3 {
-  font-family: var(--font-heading);
-  font-size: 13px;
-  color: var(--glow);
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-}
-
-.contact-card p {
-  color: var(--silver);
-  font-size: 14px;
-}
-
-.btn-whatsapp {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: linear-gradient(135deg, #25D366, #128C7E);
-  color: var(--white);
-  padding: 16px 45px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: all 0.3s;
-  box-shadow: 0 0 20px rgba(37,211,102,0.3);
-}
-
-.btn-whatsapp:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 40px rgba(37,211,102,0.6);
-}
-
-/* --- FLOATING WHATSAPP --- */
-.float-whatsapp {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 55px;
-  height: 55px;
-  background: linear-gradient(135deg, #25D366, #128C7E);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 24px;
-  color: white;
-  z-index: 999;
-  box-shadow: 0 0 20px rgba(37,211,102,0.4);
-  animation: pulse 2s infinite;
-  transition: all 0.3s;
-}
-
-.float-whatsapp:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 40px rgba(37,211,102,0.7);
-}
-
-@keyframes pulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(37,211,102,0.4); }
-  50% { box-shadow: 0 0 40px rgba(37,211,102,0.8); }
-}
-
-/* --- FOOTER --- */
-.footer {
-  padding: 60px 0 30px;
-  background: var(--bg-secondary);
-  border-top: 1px solid var(--border);
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
-.footer-brand .logo {
-  display: block;
-  margin-bottom: 15px;
-}
-
-.footer-brand p {
-  color: var(--silver);
-  font-size: 14px;
-  line-height: 1.7;
-  max-width: 280px;
-}
-
-.footer-title {
-  font-family: var(--font-heading);
-  font-size: 13px;
-  color: var(--white);
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.footer-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-links a {
-  color: var(--silver);
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s;
-}
-
-.footer-links a:hover { color: var(--glow); }
-
-.footer-bottom {
-  border-top: 1px solid var(--border);
-  padding-top: 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.footer-bottom p {
-  color: var(--silver);
-  font-size: 13px;
-}
-
-.footer-bottom span { color: var(--glow); }
-
-/* --- ANIMATIONS --- */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* --- MOBILE --- */
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-
-  .hero .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-tag { justify-content: center; }
-  .hero-title { font-size: 32px; }
-  .typing-container { font-size: 28px; }
-  .hero-desc { margin: 0 auto 30px; }
-  .hero-buttons { justify-content: center; }
-  .hero-right { flex: unset; width: 100%; max-width: 350px; }
-
-  .section-title { font-size: 26px; }
-
-  .stats-grid { gap: 30px; }
-  .stat-item h3 { font-size: 32px; }
-
-  .pricing-card.popular { transform: scale(1); }
-  .pricing-card.popular:hover { transform: translateY(-5px); }
-
-  .footer-grid { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; text-align: center; }
-}
-</style>
+  --bg-primary:#050A1C;--bg-secondary:#080E22;--bg-card:#0C1228;--bg-glass:rgba(8,14,34,0.7);
+  --blue:#1D4ED8;--blue-mid:#2563EB;--glow:#38BDF8;--glow-dim:rgba(56,189,248,0.18);
+  --glow-mid:rgba(56,189,248,0.4);--cyan:#06B6D4;--silver:#94A3B8;--silver-light:#CBD5E1;
+  --white:#FFFFFF;--border:rgba(56,189,248,0.12);--border-hover:rgba(56,189,248,0.4);
+  --font-heading:'Orbitron',sans-serif;--font-body:'Rajdhani',sans-serif;--font-mono:'Space Mono',monospace;
+  --transition:0.3s cubic-bezier(0.4,0,0.2,1);--radius:16px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg-primary);color:var(--silver-light);font-family:var(--font-body);font-size:18px;line-height:1.7;overflow-x:hidden;cursor:none;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+ul{list-style:none;}
+button{border:none;background:none;cursor:none;font-family:inherit;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:var(--bg-primary);}
+::-webkit-scrollbar-thumb{background:var(--glow);border-radius:4px;}
+#cursor-dot{width:8px;height:8px;background:var(--glow);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:transform 0.1s,width 0.2s,height 0.2s,background 0.2s;box-shadow:0 0 10px var(--glow),0 0 20px var(--glow);}
+#cursor-ring{width:36px;height:36px;border:1.5px solid rgba(56,189,248,0.5);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:transform 0.12s ease-out,width 0.2s,height 0.2s,opacity 0.2s;}
+body.hovering #cursor-dot{width:14px;height:14px;background:#fff;}
+body.hovering #cursor-ring{width:52px;height:52px;opacity:0.6;}
+#scroll-progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--blue-mid),var(--glow));z-index:9999;width:0%;transition:width 0.1s linear;box-shadow:0 0 8px var(--glow);}
+#loader{position:fixed;inset:0;background:var(--bg-primary);z-index:99997;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;transition:opacity 0.6s,visibility 0.6s;}
+#loader.hidden{opacity:0;visibility:hidden;}
+.loader-logo{font-family:var(--font-heading);font-size:32px;font-weight:900;color:var(--white);letter-spacing:3px;}
+.loader-logo span{color:var(--glow);}
+.loader-bar-wrap{width:260px;height:2px;background:var(--border);border-radius:2px;overflow:hidden;}
+.loader-bar{height:100%;width:0%;background:linear-gradient(90deg,var(--blue-mid),var(--glow));border-radius:2px;animation:loadBar 1.8s ease forwards;box-shadow:0 0 10px var(--glow);}
+@keyframes loadBar{to{width:100%;}}
+.loader-pct{font-family:var(--font-mono);color:var(--glow);font-size:13px;letter-spacing:2px;}
+.page{display:none;}
+.page.active{display:block;}
+.header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:18px 0;background:rgba(5,10,28,0.92);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--border);transition:padding var(--transition);}
+.header.scrolled{padding:12px 0;}
+.header .container{display:flex;justify-content:space-between;align-items:center;}
+.logo{font-family:var(--font-heading);font-size:20px;font-weight:900;color:var(--white);letter-spacing:2px;cursor:none;}
+.logo span{color:var(--glow);}
+.logo-dot{color:var(--blue-mid);}
+.nav ul{display:flex;gap:34px;align-items:center;}
+.nav ul li a{color:var(--silver);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;position:relative;padding-bottom:4px;transition:color var(--transition);}
+.nav ul li a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--glow);transition:width var(--transition);}
+.nav ul li a:hover,.nav ul li a.active{color:var(--glow);}
+.nav ul li a:hover::after,.nav ul li a.active::after{width:100%;}
+.nav-cta{background:linear-gradient(135deg,var(--blue-mid),var(--glow)) !important;color:var(--white) !important;padding:9px 22px !important;border-radius:50px !important;font-size:12px !important;box-shadow:0 0 18px rgba(56,189,248,0.3);}
+.nav-cta::after{display:none !important;}
+.nav-cta:hover{box-shadow:0 0 30px rgba(56,189,248,0.6) !important;transform:translateY(-2px);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:none;z-index:1001;}
+.hamburger span{display:block;width:26px;height:2px;background:var(--glow);border-radius:2px;transition:all 0.3s;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+@media(max-width:900px){
+  .hamburger{display:flex;}
+  .nav{position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(5,10,28,0.98);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all 0.4s;z-index:999;}
+  .nav.open{opacity:1;visibility:visible;}
+  .nav ul{flex-direction:column;gap:30px;text-align:center;}
+  .nav ul li a{font-size:18px;}
+}
+.container{max-width:1140px;margin:0 auto;padding:0 24px;}
+.container-wide{max-width:1400px;margin:0 auto;padding:0 24px;}
+.section-badge{display:inline-block;font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--glow);border:1px solid var(--glow-mid);padding:6px 16px;border-radius:50px;background:var(--glow-dim);margin-bottom:20px;}
+.section-title{font-family:var(--font-heading);font-size:clamp(32px,5vw,52px);font-weight:900;color:var(--white);text-align:center;margin-bottom:16px;letter-spacing:1px;line-height:1.1;}
+.section-title span{background:linear-gradient(135deg,var(--blue-mid),var(--glow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.section-sub{text-align:center;color:var(--silver);font-size:17px;max-width:620px;margin:0 auto 70px;line-height:1.7;}
+.section-header{text-align:center;margin-bottom:70px;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--blue-mid),var(--glow));color:var(--white);padding:16px 44px;border-radius:50px;font-family:var(--font-heading);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:all var(--transition);box-shadow:0 0 20px rgba(56,189,248,0.3);position:relative;overflow:hidden;}
+.btn-primary::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--glow),var(--blue-mid));opacity:0;transition:opacity var(--transition);}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 0 40px rgba(56,189,248,0.6);}
+.btn-primary:hover::after{opacity:1;}
+.btn-primary span{position:relative;z-index:1;}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--glow);padding:14px 44px;border-radius:50px;border:1.5px solid var(--glow);font-family:var(--font-heading);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:all var(--transition);}
+.btn-secondary:hover{background:rgba(56,189,248,0.1);box-shadow:0 0 30px rgba(56,189,248,0.2);transform:translateY(-3px);}
+.btn-glow{display:inline-flex;align-items:center;gap:8px;background:rgba(56,189,248,0.08);color:var(--glow);padding:12px 32px;border-radius:50px;border:1px solid var(--glow-mid);font-family:var(--font-heading);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:all var(--transition);}
+.btn-glow:hover{background:rgba(56,189,248,0.18);transform:translateY(-2px);}
+.btn-whatsapp{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#25D366,#128C7E);color:var(--white);padding:16px 44px;border-radius:50px;font-family:var(--font-heading);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:all var(--transition);box-shadow:0 0 20px rgba(37,211,102,0.3);}
+.btn-whatsapp:hover{transform:translateY(-3px);box-shadow:0 0 40px rgba(37,211,102,0.5);}
+.fade-up{opacity:0;transform:translateY(40px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+.fade-left{opacity:0;transform:translateX(-40px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.fade-left.visible{opacity:1;transform:translateX(0);}
+.fade-right{opacity:0;transform:translateX(40px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.fade-right.visible{opacity:1;transform:translateX(0);}
+.scale-in{opacity:0;transform:scale(0.85);transition:opacity 0.6s ease,transform 0.6s ease;}
+.scale-in.visible{opacity:1;transform:scale(1);}
+.glass-card{background:rgba(8,14,34,0.6);border:1px solid var(--border);border-radius:var(--radius);backdrop-filter:blur(20px);transition:all var(--transition);}
+.glass-card:hover{border-color:var(--border-hover);box-shadow:0 20px 60px rgba(29,78,216,0.2);transform:translateY(-6px);}
+#particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}
+.hero{min-height:100vh;display:flex;align-items:center;padding:130px 24px 80px;position:relative;overflow:hidden;}
+.hero-bg-orb{position:absolute;border-radius:50%;pointer-events:none;z-index:1;}
+.hero-bg-orb-1{width:700px;height:700px;background:radial-gradient(circle,rgba(29,78,216,0.12) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);animation:orbPulse 6s ease-in-out infinite;}
+.hero-bg-orb-2{width:400px;height:400px;background:radial-gradient(circle,rgba(56,189,248,0.06) 0%,transparent 70%);top:20%;right:10%;animation:orbPulse 8s ease-in-out infinite reverse;}
+@keyframes orbPulse{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:1;}50%{transform:translate(-50%,-50%) scale(1.15);opacity:0.7;}}
+.hero-inner{max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:2;}
+.hero-eyebrow{font-family:var(--font-mono);font-size:12px;font-weight:400;color:var(--glow);letter-spacing:4px;text-transform:uppercase;margin-bottom:24px;display:inline-flex;align-items:center;gap:10px;}
+.hero-eyebrow::before,.hero-eyebrow::after{content:'';display:block;width:30px;height:1px;background:var(--glow);}
+.hero-title{font-family:var(--font-heading);font-size:clamp(44px,8vw,88px);font-weight:900;color:var(--white);line-height:1.0;margin-bottom:24px;letter-spacing:-2px;}
+.hero-title .line-gradient{background:linear-gradient(135deg,#6DAFFF,var(--glow),#A78BFA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% auto;animation:gradShift 4s linear infinite;}
+@keyframes gradShift{0%{background-position:0%}100%{background-position:200%}}
+.hero-type-wrap{display:inline-flex;align-items:center;gap:0;min-height:1.1em;}
+#typing-text{background:linear-gradient(135deg,var(--blue-mid),var(--glow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.cursor-blink{color:var(--glow);animation:blink 0.9s step-end infinite;-webkit-text-fill-color:var(--glow);}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.hero-desc{font-size:18px;color:var(--silver);max-width:580px;margin:0 auto 44px;line-height:1.8;}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.hero-stats{display:flex;gap:60px;justify-content:center;margin-top:80px;padding-top:50px;border-top:1px solid var(--border);flex-wrap:wrap;}
+.hero-stat-num{font-family:var(--font-heading);font-size:36px;font-weight:900;background:linear-gradient(135deg,var(--blue-mid),var(--glow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-stat-lbl{color:var(--silver);font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-top:4px;}
+.featured-services{padding:120px 0;background:var(--bg-secondary);position:relative;overflow:hidden;}
+.featured-services::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--glow),transparent);}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
+.svc-card{padding:40px 32px;border-radius:20px;background:var(--bg-card);border:1px solid var(--border);position:relative;overflow:hidden;transition:all var(--transition);}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue-mid),var(--glow));transform:scaleX(0);transition:transform var(--transition);}
+.svc-card:hover::before{transform:scaleX(1);}
+.svc-card:hover{border-color:var(--border-hover);transform:translateY(-8px);box-shadow:0 30px 60px rgba(29,78,216,0.2);}
+.svc-icon-wrap{width:60px;height:60px;border-radius:14px;background:rgba(56,189,248,0.1);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:24px;transition:all var(--transition);}
+.svc-card:hover .svc-icon-wrap{background:rgba(56,189,248,0.2);border-color:var(--glow-mid);}
+.svc-card h3{font-family:var(--font-heading);font-size:14px;font-weight:700;color:var(--white);letter-spacing:1px;margin-bottom:12px;}
+.svc-card p{color:var(--silver);font-size:15px;line-height:1.7;margin-bottom:20px;}
+.svc-link{color:var(--glow);font-size:13px;font-weight:600;letter-spacing:1px;transition:gap var(--transition);display:inline-flex;align-items:center;gap:6px;}
+.svc-link:hover{gap:12px;}
+.featured-projects{padding:120px 0;background:var(--bg-primary);}
+.projects-showcase{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.project-card-feat{border-radius:20px;overflow:hidden;background:var(--bg-card);border:1px solid var(--border);position:relative;cursor:none;transition:all var(--transition);}
+.project-card-feat:nth-child(1){grid-row:span 2;}
+.project-thumb{width:100%;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,var(--bg-secondary),var(--bg-card));position:relative;display:flex;align-items:center;justify-content:center;}
+.project-thumb-inner{width:100%;height:100%;background:linear-gradient(135deg,rgba(29,78,216,0.3),rgba(56,189,248,0.1));display:flex;align-items:center;justify-content:center;font-size:64px;transition:transform 0.5s ease;}
+.project-card-feat:hover .project-thumb-inner{transform:scale(1.08);}
+.project-card-feat:nth-child(1) .project-thumb{aspect-ratio:4/3;}
+.project-info{padding:28px 30px;}
+.project-tag{font-family:var(--font-mono);font-size:11px;color:var(--glow);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
+.project-info h3{font-family:var(--font-heading);font-size:16px;color:var(--white);letter-spacing:1px;margin-bottom:10px;}
+.project-info p{color:var(--silver);font-size:15px;}
+.project-card-feat:hover{border-color:var(--border-hover);box-shadow:0 30px 60px rgba(29,78,216,0.2);}
+.counters-section{padding:100px 0;background:var(--bg-secondary);}
+.counters-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px;border:1px solid var(--border);border-radius:20px;overflow:hidden;}
+.counter-item{padding:50px 30px;text-align:center;background:var(--bg-card);position:relative;}
+.counter-item::after{content:'';position:absolute;right:0;top:20%;height:60%;width:1px;background:var(--border);}
+.counter-item:last-child::after{display:none;}
+.counter-num{font-family:var(--font-heading);font-size:48px;font-weight:900;background:linear-gradient(135deg,var(--blue-mid),var(--glow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:8px;}
+.counter-lbl{color:var(--silver);font-size:13px;letter-spacing:2px;text-transform:uppercase;}
+.testimonials{padding:120px 0;background:var(--bg-primary);overflow:hidden;}
+.testimonials-track-wrap{overflow:hidden;position:relative;}
+.testimonials-track{display:flex;gap:24px;align-items:stretch;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1);}
+.testimonial-card{flex:0 0 380px;padding:40px;background:var(--bg-card);border:1px solid var(--border);border-radius:20px;transition:all var(--transition);}
+.testimonial-card:hover{border-color:var(--border-hover);}
+.stars{color:#FBBF24;font-size:16px;margin-bottom:20px;letter-spacing:2px;}
+.testimonial-text{color:var(--silver-light);font-size:16px;line-height:1.8;margin-bottom:28px;font-style:italic;}
+.testimonial-author{display:flex;align-items:center;gap:14px;}
+.author-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--blue-mid),var(--glow));display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:14px;font-weight:700;color:var(--white);}
+.author-name{font-family:var(--font-heading);font-size:12px;color:var(--white);letter-spacing:1px;}
+.author-role{color:var(--silver);font-size:13px;}
+.testimonials-nav{display:flex;gap:12px;justify-content:center;margin-top:40px;}
+.t-nav-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--border);color:var(--glow);font-size:18px;display:flex;align-items:center;justify-content:center;transition:all var(--transition);cursor:none;}
+.t-nav-btn:hover{background:var(--glow-dim);border-color:var(--glow-mid);}
+.tech-stack{padding:100px 0;background:var(--bg-secondary);}
+.tech-grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;}
+.tech-chip{padding:12px 24px;border-radius:50px;border:1px solid var(--border);background:var(--bg-card);display:flex;align-items:center;gap:8px;transition:all var(--transition);}
+.tech-chip:hover{border-color:var(--glow-mid);background:rgba(56,189,248,0.06);transform:translateY(-3px);}
+.tech-chip span:first-child{font-size:20px;}
+.tech-chip span:last-child{font-family:var(--font-heading);font-size:11px;color:var(--silver-light);letter-spacing:1px;}
+.process-section{padding:120px 0;background:var(--bg-primary);}
+.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;position:relative;}
+.process-steps::after{content:'';position:absolute;top:44px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);z-index:0;}
+.process-step{text-align:center;padding:20px 24px;position:relative;z-index:1;}
+.step-num{width:88px;height:88px;border-radius:50%;background:var(--bg-card);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:24px;font-weight:900;background:linear-gradient(135deg,var(--blue-mid),var(--glow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:0 auto 24px;box-shadow:0 0 30px rgba(56,189,248,0.15);transition:all var(--transition);}
+.process-step:hover .step-num{box-shadow:0 0 50px rgba(56,189,248,0.3);}
+.process-step h3{font-family:var(--font-heading);font-size:13px;color:var(--white);letter-spacing:1px;margin-bottom:10px;}
+.process-step p{color:var(--silver);font-size:14px;line-height:1.6;}
+.footer{padding:80px 0 40px;background:var(--bg-secondary);border-top:1px solid var(--border);position:relative;overflow:hidden;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;}
+.footer-brand .logo{margin-bottom:16px;font-size:18px;}
+.footer-brand p{color:var(--silver);font-size:15px;line-height:1.7;max-width:280px;}
+.footer-col h4{font-family:var(--font-heading);font-size:11px;color:var(--white);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;}
+.footer-col ul li{margin-bottom:10px;}
+.footer-col ul li a{color:var(--silver);font-size:15px;transition:color var(--transition);}
+.footer-col ul li a:hover{color:var(--glow);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:30px;border-top:1px solid var(--border);flex-wrap:wrap;gap:16px;}
+.footer-bottom p{color:var(--silver);font-size:14px;}
+.footer-bottom span{color:var(--glow);}
+.footer-social{display:flex;gap:12px;flex-wrap:wrap;}
+.social-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--border);color:var(--silver);display:flex;align-items:center;justify-content:center;font-size:14px;transition:all var(--transition);}
+.social-btn:hover{border-color:var(--glow-mid);color:var(--glow);transform:translateY(-3px);}
+.about-hero{padding:160px 0 100px;background:var(--bg-primary);position:relative;overflow:hidden;}
+.about-hero-content{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.about-photo-wrap{position:relative;}
+.about-photo-frame{width:100%;aspect-ratio:1;border-radius:24px;border:2px solid var(--border);background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary));display:flex;align-items:center;justify-content:center;font-size:120px;position:relative;overflow:hidden;}
+.about-photo-frame::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(29,78,216,0.2),rgba(56,189,248,0.05));}
+.about-photo-glow{position:absolute;width:300px;height:300px;background:radial-gradient(circle,rgba(56,189,248,0.2),transparent 70%);top:-50px;right:-50px;border-radius:50%;animation:orbPulse 5s infinite;}
+.about-info .section-badge{margin-bottom:16px;}
+.about-info h1{font-family:var(--font-heading);font-size:clamp(32px,5vw,52px);font-weight:900;color:var(--white);line-height:1.1;margin-bottom:16px;letter-spacing:1px;}
+.about-info h1 span{background:linear-gradient(135deg,var(--blue-mid),var(--glow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.about-info p{color:var(--silver);font-size:17px;line-height:1.8;margin-bottom:16px;}
+.about-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
+.about-chip{padding:8px 18px;border-radius:50px;border:1px solid var(--border);font-family:var(--font-mono);font-size:11px;color:var(--glow);background:var(--glow-dim);letter-spacing:1px;}
+.mission-vision{padding:100px 0;background:var(--bg-secondary);}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.mv-card{padding:50px 40px;border-radius:20px;background:var(--bg-card);border:1px solid var(--border);transition:all var(--transition);}
+.mv-card:hover{border-color:var(--border-hover);transform:translateY(-6px);}
+.mv-icon{font-size:48px;margin-bottom:20px;}
+.mv-card h3{font-family:var(--font-heading);font-size:18px;color:var(--white);letter-spacing:1px;margin-bottom:16px;}
+.mv-card p{color:var(--silver);font-size:16px;line-height:1.8;}
+.timeline-section{padding:120px 0;background:var(--bg-primary);}
+.timeline{position:relative;max-width:800px;margin:0 auto;}
+.timeline::before{content:'';position:absolute;left:50%;transform:translateX(-50%);top:0;bottom:0;width:1px;background:var(--border);}
+.tl-item{display:grid;grid-template-columns:1fr 60px 1fr;gap:0;align-items:start;margin-bottom:50px;}
+.tl-left{text-align:right;padding:0 30px 0 0;padding-top:8px;}
+.tl-right{padding:0 0 0 30px;padding-top:8px;}
+.tl-dot{width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,var(--blue-mid),var(--glow));margin:8px auto 0;box-shadow:0 0 20px rgba(56,189,248,0.5);position:relative;z-index:1;}
+.tl-year{font-family:var(--font-mono);font-size:12px;color:var(--glow);letter-spacing:2px;margin-bottom:8px;}
+.tl-title{font-family:var(--font-heading);font-size:14px;color:var(--white);letter-spacing:1px;margin-bottom:6px;}
+.tl-desc{color:var(--silver);font-size:14px;line-height:1.6;}
+.skills-section{padding:120px 0;background:var(--bg-secondary);}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px 60px;}
+.skill-head{display:flex;justify-content:space-between;margin-bottom:10px;}
+.skill-name{font-family:var(--font-heading);font-size:12px;color:var(--white);letter-spacing:1px;}
+.skill-pct{font-family:var(--font-mono);font-size:12px;color:var(--glow);}
+.skill-bar-bg{height:6px;border-radius:6px;background:var(--bg-card);overflow:hidden;}
+.skill-bar-fill{height:100%;border-radius:6px;width:0%;background:linear-gradient(90deg,var(--blue-mid),var(--glow));transition:width 1.2s cubic-bezier(0.4,0,0.2,1);box-shadow:0 0 10px rgba(56,189,248,0.4);}
+.achievements-section{padding:120px 0;background:var(--bg-primary);}
+.achievements-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
+.ach-card{padding:40px 32px;border-radius:20px;background:var(--bg-card);border:1px solid var(--border);display:flex;gap:20px;align-items:flex-start;transition:all var(--transition);}
+.ach-card:hover{border-color:var(--border-hover);transform:translateY(-6px);}
+.ach-icon{font-size:36px;flex-shrink:0;}
+.ach-text h3{font-family:var(--font-heading);font-size:13px;color:var(--white);letter-spacing:1px;margin-bottom:8px;}
+.ach-text p{color:var(--silver);font-size:14px;line-height:1.6;}
+.philosophy-section{padding:100px 0;background:var(--bg-secondary);}
+.philosophy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.phil-card{padding:40px 30px;border-radius:20px;border:1px solid var(--border);background:var(--bg-card);text-align:center;transition:all var(--transition);}
+.phil-card:hover{border-color:var(--border-hover);transform:translateY(-6px);}
+.phil-num{font-family:var(--font-heading);font-size:48px;font-weight:900;background:linear-gradient(135deg,var(--blue-mid),var(--glow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;}
+.phil-card h3{font-family:var(--font-heading);font-size:13px;color:var(--white);letter-spacing:1px;margin-bottom:12px;}
+.phil-card p{color:var(--silver);font-size:15px;line-height:1.7;}
+.services-hero{padding:160px 0 100px;background:var(--bg-primary);text-align:center;}
+.services-detail{padding:120px 0;background:var(--bg-secondary);}
+.services-detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;}
+.svc-detail-card{padding:50px 40px;border-radius:20px;background:var(--bg-card);border:1px solid var(--border);transition:all var(--transition);position:relative;overflow:hidden;}
+.svc-detail-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue-mid),var(--glow));transform:scaleX(0);transition:transform var(--transition);}
+.svc-detail-card:hover::after{transform:scaleX(1);}
+.svc-detail-card:hover{border-color:var(--border-hover);transform:translateY(-8px);box-shadow:0 30px 60px rgba(29,78,216,0.2);}
+.svc-detail-icon{font-size:52px;margin-bottom:24px;}
+.svc-detail-card h3{font-family:var(--font-heading);font-size:16px;color:var(--white);letter-spacing:1px;margin-bottom:16px;}
+.svc-detail-card p{color:var(--silver);font-size:16px;line-height:1.7;margin-bottom:24px;}
+.svc-features{list-style:none;}
+.svc-features li{color:var(--silver);font-size:14px;padding:6px 0;border-bottom:1px solid rgba(56,189,248,0.06);display:flex;align-items:center;gap:8px;}
+.svc-features li::before{content:'→';color:var(--glow);font-size:12px;}
+.pricing-section{padding:120px 0;background:var(--bg-primary);}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start;}
+.pricing-card{padding:50px 36px;border-radius:20px;background:var(--bg-card);border:1px solid var(--border);position:relative;transition:all var(--transition);}
+.pricing-card.featured{border:2px solid var(--glow-mid);background:linear-gradient(135deg,rgba(29,78,216,0.08),rgba(56,189,248,0.04));transform:scale(1.04);box-shadow:0 0 60px rgba(56,189,248,0.12);}
+.pricing-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--blue-mid),var(--glow));color:var(--white);padding:5px 18px;border-radius:50px;font-family:var(--font-heading);font-size:11px;font-weight:700;letter-spacing:1px;white-space:nowrap;}
+.pricing-tier{font-family:var(--font-mono);font-size:11px;color:var(--glow);letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;}
+.pricing-price{font-family:var(--font-heading);font-size:48px;font-weight:900;color:var(--white);margin-bottom:8px;line-height:1;}
+.pricing-price span{font-size:18px;font-weight:400;color:var(--silver);}
+.pricing-desc{color:var(--silver);font-size:14px;margin-bottom:32px;}
+.pricing-features{margin-bottom:40px;}
+.pricing-features li{color:var(--silver-light);font-size:14px;padding:10px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;}
+.pricing-features li .check{color:#22C55E;font-weight:700;}
+.pricing-features li .cross{color:#EF4444;}
+.pricing-card:hover{border-color:var(--border-hover);transform:translateY(-6px);box-shadow:0 30px 60px rgba(29,78,216,0.2);}
+.pricing-card.featured:hover{transform:scale(1.04) translateY(-6px);}
+.faq-section{padding:120px 0;background:var(--bg-secondary);}
+.faq-list{max-width:800px;margin:0 auto;}
+.faq-item{border:1px solid var(--border);border-radius:14px;background:var(--bg-card);margin-bottom:12px;overflow:hidden;transition:all var(--transition);}
+.faq-item.open{border-color:var(--border-hover);}
+.faq-question{width:100%;padding:24px 28px;display:flex;justify-content:space-between;align-items:center;background:none;color:var(--white);font-family:var(--font-heading);font-size:14px;font-weight:700;letter-spacing:0.5px;text-align:left;transition:color var(--transition);cursor:none;}
+.faq-question:hover{color:var(--glow);}
+.faq-arrow{width:32px;height:32px;border-radius:50%;border:1px solid var(--border);color:var(--glow);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:all var(--transition);}
+.faq-item.open .faq-arrow{transform:rotate(45deg);background:var(--glow-dim);border-color:var(--glow-mid);}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.4s ease;padding:0 28px;}
+.faq-item.open .faq-answer{max-height:200px;padding:0 28px 24px;}
+.faq-answer p{color:var(--silver);font-size:15px;line-height:1.7;}
+.cta-banner{padding:100px 0;background:var(--bg-primary);}
+.cta-inner{background:linear-gradient(135deg,rgba(29,78,216,0.15),rgba(56,189,248,0.06));border:1px solid var(--border-hover);border-radius:24px;padding:70px 60px;text-align:center;position:relative;overflow:hidden;}
+.cta-inner::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at center,rgba(56,189,248,0.04) 0%,transparent 60%);animation:rotateBg 20s linear infinite;}
+@keyframes rotateBg{to{transform:rotate(360deg);}}
+.cta-inner h2{font-family:var(--font-heading);font-size:clamp(28px,4vw,44px);color:var(--white);margin-bottom:16px;position:relative;z-index:1;}
+.cta-inner p{color:var(--silver);font-size:17px;margin-bottom:40px;position:relative;z-index:1;}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+.portfolio-hero{padding:160px 0 100px;background:var(--bg-primary);text-align:center;}
+.portfolio-filters{padding:0 0 60px;background:var(--bg-primary);}
+.filter-bar{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.filter-btn{padding:10px 24px;border-radius:50px;cursor:none;border:1px solid var(--border);background:var(--bg-card);font-family:var(--font-heading);font-size:11px;color:var(--silver);letter-spacing:2px;text-transform:uppercase;transition:all var(--transition);}
+.filter-btn.active,.filter-btn:hover{border-color:var(--glow-mid);color:var(--glow);background:var(--glow-dim);}
+.portfolio-grid-section{padding:0 0 120px;background:var(--bg-primary);}
+.portfolio-masonry{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.port-card{border-radius:20px;overflow:hidden;background:var(--bg-card);border:1px solid var(--border);position:relative;cursor:none;transition:all var(--transition);}
+.port-card.span-2{grid-column:span 2;}
+.port-thumb{width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--bg-secondary);display:flex;align-items:center;justify-content:center;position:relative;}
+.port-thumb-inner{width:100%;height:100%;background:linear-gradient(135deg,rgba(29,78,216,0.25),rgba(56,189,248,0.1));display:flex;align-items:center;justify-content:center;font-size:72px;transition:transform 0.6s ease;}
+.port-overlay{position:absolute;inset:0;background:rgba(5,10,28,0.85);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;opacity:0;transition:opacity var(--transition);}
+.port-card:hover .port-overlay{opacity:1;}
+.port-card:hover .port-thumb-inner{transform:scale(1.1);}
+.port-card:hover{border-color:var(--border-hover);box-shadow:0 30px 60px rgba(29,78,216,0.2);}
+.port-overlay-title{font-family:var(--font-heading);font-size:15px;color:var(--white);letter-spacing:1px;text-align:center;padding:0 20px;}
+.port-info{padding:24px 28px;}
+.port-cat{font-family:var(--font-mono);font-size:11px;color:var(--glow);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
+.port-info h3{font-family:var(--font-heading);font-size:14px;color:var(--white);letter-spacing:1px;margin-bottom:6px;}
+.port-info p{color:var(--silver);font-size:14px;}
+.portfolio-stats{padding:100px 0;background:var(--bg-secondary);}
+.ps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.ps-item{padding:40px 30px;text-align:center;border-radius:20px;background:var(--bg-card);border:1px solid var(--border);transition:all var(--transition);}
+.ps-item:hover{border-color:var(--border-hover);transform:translateY(-6px);}
+.ps-num{font-family:var(--font-heading);font-size:44px;font-weight:900;background:linear-gradient(135deg,var(--blue-mid),var(--glow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px;}
+.ps-lbl{color:var(--silver);font-size:13px;letter-spacing:2px;text-transform:uppercase;}
+.contact-hero{padding:160px 0 80px;background:var(--bg-primary);text-align:center;}
+.contact-main{padding:80px 0 120px;background:var(--bg-primary);}
+.contact-layout{display:grid;grid-template-columns:1fr 1.5fr;gap:60px;align-items:start;}
+.contact-info-item{display:flex;gap:20px;align-items:flex-start;padding:28px;border-radius:16px;background:var(--bg-card);border:1px solid var(--border);margin-bottom:16px;transition:all var(--transition);}
+.contact-info-item:hover{border-color:var(--border-hover);transform:translateX(6px);}
+.ci-icon{width:48px;height:48px;border-radius:12px;flex-shrink:0;background:rgba(56,189,248,0.1);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:22px;}
+.ci-text h4{font-family:var(--font-heading);font-size:12px;color:var(--glow);letter-spacing:2px;margin-bottom:6px;}
+.ci-text p{color:var(--silver-light);font-size:15px;}
+.ci-text a{color:var(--silver-light);transition:color var(--transition);}
+.ci-text a:hover{color:var(--glow);}
+.social-connect{margin-top:30px;}
+.social-connect h4{font-family:var(--font-heading);font-size:11px;color:var(--silver);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;}
+.social-links{display:flex;gap:10px;flex-wrap:wrap;}
+.social-link{padding:10px 18px;border-radius:10px;border:1px solid var(--border);background:var(--bg-card);color:var(--silver);font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;transition:all var(--transition);}
+.social-link:hover{border-color:var(--glow-mid);color:var(--glow);background:var(--glow-dim);}
+.hours-card{padding:28px;border-radius:16px;background:var(--bg-card);border:1px solid var(--border);margin-top:16px;}
+.hours-card h4{font-family:var(--font-heading);font-size:12px;color:var(--white);letter-spacing:1px;margin-bottom:16px;}
+.hours-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:14px;}
+.hours-row:last-child{border:none;}
+.hours-row .day{color:var(--silver);}
+.hours-row .time{color:var(--glow);font-family:var(--font-mono);font-size:12px;}
+.contact-form-wrap{padding:50px 44px;border-radius:24px;background:var(--bg-card);border:1px solid var(--border);}
+.form-title{font-family:var(--font-heading);font-size:20px;color:var(--white);letter-spacing:1px;margin-bottom:8px;}
+.form-sub{color:var(--silver);font-size:15px;margin-bottom:36px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.form-group{margin-bottom:20px;}
+.form-group label{display:block;font-family:var(--font-heading);font-size:11px;color:var(--silver);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:14px 18px;border-radius:10px;background:var(--bg-secondary);border:1px solid var(--border);color:var(--white);font-family:var(--font-body);font-size:15px;transition:all var(--transition);outline:none;resize:vertical;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--glow-mid);box-shadow:0 0 20px rgba(56,189,248,0.1);}
+.form-group textarea{min-height:140px;}
+.form-group select{appearance:none;cursor:none;}
+.form-submit{width:100%;padding:18px;margin-top:8px;}
+.booking-section{padding:100px 0;background:var(--bg-secondary);}
+.booking-card{max-width:700px;margin:0 auto;padding:60px 50px;text-align:center;border-radius:24px;background:var(--bg-card);border:1px solid var(--border);}
+.booking-card h3{font-family:var(--font-heading);font-size:24px;color:var(--white);letter-spacing:1px;margin-bottom:12px;}
+.booking-card p{color:var(--silver);font-size:16px;margin-bottom:36px;}
+.map-section{padding:100px 0;background:var(--bg-primary);}
+.map-wrap{height:380px;border-radius:24px;overflow:hidden;border:1px solid var(--border);position:relative;background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary));display:flex;align-items:center;justify-content:center;}
+.map-placeholder{text-align:center;}
+.map-placeholder h3{font-family:var(--font-heading);font-size:18px;color:var(--white);letter-spacing:1px;margin-bottom:8px;}
+.map-placeholder p{color:var(--silver);font-size:15px;}
+@media(max-width:1024px){
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .about-hero-content{grid-template-columns:1fr;gap:40px;}
+  .about-photo-wrap{max-width:380px;}
+  .skills-grid{grid-template-columns:1fr;}
+  .pricing-grid{grid-template-columns:1fr;}
+  .pricing-card.featured{transform:scale(1);}
+  .projects-showcase{grid-template-columns:1fr;}
+  .project-card-feat:nth-child(1){grid-row:auto;}
+  .contact-layout{grid-template-columns:1fr;}
+  .timeline{padding:0 20px;}
+  .timeline::before{left:20px;transform:none;}
+  .tl-item{grid-template-columns:0 20px 1fr;}
+  .tl-left{display:none;}
+  .tl-right{padding-left:20px;}
+  .tl-dot{margin:8px 0 0;}
+  .ps-grid{grid-template-columns:1fr 1fr;}
+  .philosophy-grid{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+  .hero-title{letter-spacing:-1px;}
+  .portfolio-masonry{grid-template-columns:1fr;}
+  .port-card.span-2{grid-column:auto;}
+  .footer-grid{grid-template-columns:1fr;gap:30px;}
+  .mv-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .contact-form-wrap{padding:36px 24px;}
+  .cta-inner{padding:50px 30px;}
+  .process-steps::after{display:none;}
+  .counters-grid{grid-template-columns:1fr 1fr;}
+  .counter-item::after{display:none;}
+  .hero-stats{gap:30px;}
+  .pricing-grid{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .hero{padding:120px 16px 60px;}
+  .section-title{font-size:28px;}
+  .hero-btns{flex-direction:column;align-items:center;}
+  .ps-grid{grid-template-columns:1fr 1fr;}
+  .counters-grid{grid-template-columns:1fr;}
+}
+  </style>
 </head>
-
 <body>
 
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/2348057871328" class="float-whatsapp" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<div id="scroll-progress"></div>
 
-<!-- PARTICLES -->
-<canvas id="particles"></canvas>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="container">
-    <a href="#home" class="logo">Dev<span>By</span>Favour</a>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="https://wa.me/2348057871328" class="nav-cta" target="_blank">Hire Me</a></li>
-    </ul>
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
-</nav>
-
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#projects">Projects</a>
-  <a href="#pricing">Pricing</a>
-  <a href="#contact">Contact</a>
-  <a href="https://wa.me/2348057871328" target="_blank">💬 Hire Me on WhatsApp</a>
+<div id="loader">
+  <div class="loader-logo">Dev<span>By</span>Favour</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-pct" id="loader-pct">0%</div>
 </div>
 
-<!-- HERO -->
-<section class="hero" id="home">
+<canvas id="particles"></canvas>
+
+<header class="header" id="header">
   <div class="container">
-    <div class="hero-left">
-      <p class="hero-tag">👋 Hello, I am Favour Medunah</p>
-      <h1 class="hero-title">Building Futuristic<br>Websites For</h1>
-      <div class="typing-container">
-        <span id="typing-text"></span><span class="cursor">|</span>
-      </div>
-      <p class="hero-desc">I design and build stunning, fast and modern websites that help businesses grow and dominate online — powered by AI and cutting-edge design. Based in Benin City, Nigeria.</p>
-      <div class="hero-buttons">
-        <a href="https://wa.me/2348057871328" class="btn-primary" target="_blank">
-          <i class="fas fa-rocket"></i> Hire Me Now
-        </a>
-        <a href="#projects" class="btn-secondary">
-          <i class="fas fa-eye"></i> View Projects
-        </a>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-mockup">
-        <div class="mockup-bar">
-          <div class="mockup-dot"></div>
-          <div class="mockup-dot"></div>
-          <div class="mockup-dot"></div>
-        </div>
-        <div class="mockup-code">
-          <div class="code-line"><span class="code-comment">// DevByFavour</span></div>
-          <div class="code-line"><span class="code-tag">&lt;section</span> <span class="code-attr">class</span>=<span class="code-val">"hero"</span><span class="code-tag">&gt;</span></div>
-          <div class="code-line">&nbsp;&nbsp;<span class="code-tag">&lt;h1&gt;</span><span class="code-text">Your Vision,</span><span class="code-tag">&lt;/h1&gt;</span></div>
-          <div class="code-line">&nbsp;&nbsp;<span class="code-tag">&lt;h2&gt;</span><span class="code-text">My Code.</span><span class="code-tag">&lt;/h2&gt;</span></div>
-          <div class="code-line">&nbsp;&nbsp;<span class="code-tag">&lt;p&gt;</span><span class="code-text">Premium Design</span><span class="code-tag">&lt;/p&gt;</span></div>
-          <div class="code-line"><span class="code-tag">&lt;/section&gt;</span></div>
-        </div>
-        <div class="mockup-preview">
-          <div class="preview-nav"></div>
-          <div class="preview-hero"></div>
-          <div class="preview-cards">
-            <div class="preview-card"></div>
-            <div class="preview-card"></div>
-            <div class="preview-card"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="logo" onclick="navigateTo('home')">Dev<span>By</span>Favour<span class="logo-dot">.</span></div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+        <li><a href="#" class="nav-link" data-page="about">About</a></li>
+        <li><a href="#" class="nav-link" data-page="services">Services</a></li>
+        <li><a href="#" class="nav-link" data-page="portfolio">Portfolio</a></li>
+        <li><a href="#" class="nav-link nav-cta" data-page="contact">Hire Me</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </div>
-</section>
+</header>
 
-<!-- STATS -->
-<section class="stats">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item fade-in">
-        <h3>5+</h3>
-        <p>Projects Done</p>
-      </div>
-      <div class="stat-item fade-in">
-        <h3>3+</h3>
-        <p>Happy Clients</p>
-      </div>
-      <div class="stat-item fade-in">
-        <h3>100%</h3>
-        <p>Satisfaction</p>
-      </div>
-      <div class="stat-item fade-in">
-        <h3>24/7</h3>
-        <p>Support</p>
+<!-- HOME PAGE -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="hero-bg-orb hero-bg-orb-1"></div>
+    <div class="hero-bg-orb hero-bg-orb-2"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-eyebrow fade-up">Available for Projects</div>
+        <h1 class="hero-title fade-up">
+          <span class="hero-type-wrap"><span id="typing-text"></span><span class="cursor-blink">|</span></span><br>
+          <span class="line-gradient">Web Designer</span>
+        </h1>
+        <p class="hero-desc fade-up">I craft stunning, AI-powered websites that help businesses grow — futuristic design meets cutting-edge technology, delivered from Benin City, Nigeria to the world.</p>
+        <div class="hero-btns fade-up">
+          <a href="#" class="btn-primary" onclick="navigateTo('portfolio')"><span>View My Work</span></a>
+          <a href="https://wa.me/2348057871328?text=Hi%20Favour!%20I%20visited%20your%20website%20and%20I%27d%20love%20to%20start%20a%20project%20with%20you.%20Can%20we%20talk%3F" target="_blank" class="btn-secondary">Let's Talk →</a>
+        </div>
+        <div class="hero-stats fade-up">
+          <div><div class="hero-stat-num" data-count="30">0+</div><div class="hero-stat-lbl">Projects Delivered</div></div>
+          <div><div class="hero-stat-num" data-count="100">0%</div><div class="hero-stat-lbl">Client Satisfaction</div></div>
+          <div><div class="hero-stat-num" data-count="3">0+</div><div class="hero-stat-lbl">Years Experience</div></div>
+          <div><div class="hero-stat-num">24/7</div><div class="hero-stat-lbl">Support Available</div></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="container">
-    <h2 class="section-title">What I <span>Do</span></h2>
-    <p class="section-sub">Professional web solutions tailored to help your business grow online</p>
-    <div class="services-grid">
-      <div class="service-card fade-in">
-        <span class="service-icon">🌐</span>
-        <h3>Website Design</h3>
-        <p>Beautiful, responsive websites built from scratch that work perfectly on all devices and screens.</p>
+  <section class="featured-services">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-badge">What I Do</div>
+        <h2 class="section-title">Services That <span>Deliver Results</span></h2>
+        <p class="section-sub">From concept to launch — every pixel crafted with precision and purpose.</p>
       </div>
-      <div class="service-card fade-in">
-        <span class="service-icon">🤖</span>
-        <h3>AI-Powered Websites</h3>
-        <p>Modern websites enhanced with artificial intelligence for smarter, more engaging user experiences.</p>
-      </div>
-      <div class="service-card fade-in">
-        <span class="service-icon">📱</span>
-        <h3>Mobile-First Design</h3>
-        <p>Websites designed for mobile first, ensuring a perfect experience on every screen size.</p>
-      </div>
-      <div class="service-card fade-in">
-        <span class="service-icon">🚀</span>
-        <h3>Landing Pages</h3>
-        <p>High-converting landing pages that turn visitors into paying customers fast.</p>
-      </div>
-      <div class="service-card fade-in">
-        <span class="service-icon">🔍</span>
-        <h3>SEO Optimization</h3>
-        <p>Get found on Google. I optimize your website so your customers can find you easily online.</p>
-      </div>
-      <div class="service-card fade-in">
-        <span class="service-icon">🛠️</span>
-        <h3>Website Maintenance</h3>
-        <p>Keep your website running smoothly with regular updates, fixes and performance improvements.</p>
+      <div class="services-grid">
+        <div class="svc-card fade-up"><div class="svc-icon-wrap">🌐</div><h3>Website Design</h3><p>Beautiful, responsive websites built from scratch that work perfectly on all devices and convert visitors.</p><a href="#" class="svc-link" onclick="navigateTo('services')">Explore <span>→</span></a></div>
+        <div class="svc-card fade-up"><div class="svc-icon-wrap">🤖</div><h3>AI-Powered Websites</h3><p>Modern websites enhanced with artificial intelligence for smarter, personalized user experiences.</p><a href="#" class="svc-link" onclick="navigateTo('services')">Explore <span>→</span></a></div>
+        <div class="svc-card fade-up"><div class="svc-icon-wrap">🛒</div><h3>eCommerce Stores</h3><p>High-converting online stores with seamless checkout, payment integration, and inventory management.</p><a href="#" class="svc-link" onclick="navigateTo('services')">Explore <span>→</span></a></div>
+        <div class="svc-card fade-up"><div class="svc-icon-wrap">🚀</div><h3>Landing Pages</h3><p>High-converting landing pages engineered to turn visitors into paying customers at lightning speed.</p><a href="#" class="svc-link" onclick="navigateTo('services')">Explore <span>→</span></a></div>
+        <div class="svc-card fade-up"><div class="svc-icon-wrap">📈</div><h3>SEO Optimization</h3><p>Rank higher on Google. Technical SEO, content strategy, and performance optimization included.</p><a href="#" class="svc-link" onclick="navigateTo('services')">Explore <span>→</span></a></div>
+        <div class="svc-card fade-up"><div class="svc-icon-wrap">📱</div><h3>Mobile-First Design</h3><p>Every site is designed mobile-first, ensuring a flawless experience across all screen sizes.</p><a href="#" class="svc-link" onclick="navigateTo('services')">Explore <span>→</span></a></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROJECTS -->
-<section class="projects" id="projects">
-  <div class="container">
-    <h2 class="section-title">My <span>Projects</span></h2>
-    <p class="section-sub">Real projects currently in development — launching very soon!</p>
-    <div class="projects-grid">
-
-      <div class="project-card fade-in">
-        <div class="project-image food">
-          <span class="project-icon">🍔</span>
-          <div class="coming-soon-overlay">
-            <i class="fas fa-lock"></i>
-            <div class="coming-soon-badge">Coming Soon</div>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3>LagosEats</h3>
-          <p>A modern food delivery website for a Lagos-based restaurant chain with online ordering.</p>
-          <div class="project-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-        </div>
+  <section class="featured-projects">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-badge">Featured Work</div>
+        <h2 class="section-title">Projects That <span>Speak Louder</span></h2>
+        <p class="section-sub">A curated selection of my best digital work.</p>
       </div>
-
-      <div class="project-card fade-in">
-        <div class="project-image security">
-          <span class="project-icon">🛡️</span>
-          <div class="coming-soon-overlay">
-            <i class="fas fa-lock"></i>
-            <div class="coming-soon-badge">Coming Soon</div>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3>GuardForce Nigeria</h3>
-          <p>Professional security company website with service listings and client contact system.</p>
-          <div class="project-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-        </div>
+      <div class="projects-showcase">
+        <div class="project-card-feat fade-left"><div class="project-thumb"><div class="project-thumb-inner">🏪</div></div><div class="project-info"><div class="project-tag">eCommerce · Web Design</div><h3>FashionHub Nigeria</h3><p>A premium eCommerce fashion store with AI-powered recommendations and blazing-fast checkout.</p></div></div>
+        <div class="project-card-feat fade-right"><div class="project-thumb"><div class="project-thumb-inner">🏥</div></div><div class="project-info"><div class="project-tag">Healthcare · Landing Page</div><h3>MediCare Pro</h3><p>Modern healthcare platform redesign with appointment booking integration.</p></div></div>
+        <div class="project-card-feat fade-right"><div class="project-thumb"><div class="project-thumb-inner">💼</div></div><div class="project-info"><div class="project-tag">Business · Corporate</div><h3>TechVentures Lagos</h3><p>Corporate website for a Lagos-based tech investment firm. Clean, powerful, professional.</p></div></div>
       </div>
-
-      <div class="project-card fade-in">
-        <div class="project-image ecommerce">
-          <span class="project-icon">🛒</span>
-          <div class="coming-soon-overlay">
-            <i class="fas fa-lock"></i>
-            <div class="coming-soon-badge">Coming Soon</div>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3>ShopNaija</h3>
-          <p>A vibrant Nigerian e-commerce landing page with product showcase and payment integration.</p>
-          <div class="project-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-        </div>
-      </div>
-
+      <div style="text-align:center;margin-top:50px"><a href="#" class="btn-secondary" onclick="navigateTo('portfolio')">View All Projects →</a></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PRICING -->
-<section class="pricing" id="pricing">
-  <div class="container">
-    <h2 class="section-title">My <span>Pricing</span></h2>
-    <p class="section-sub">Transparent and affordable pricing for every business size</p>
-    <div class="pricing-grid">
-
-      <div class="pricing-card fade-in">
-        <div class="pricing-icon">⚡</div>
-        <div class="pricing-name">STARTER</div>
-        <div class="pricing-price">
-          <span class="currency">₦</span>
-          <span class="amount">25,000</span>
-        </div>
-        <ul class="pricing-features">
-          <li><i class="fas fa-check"></i> Single Landing Page</li>
-          <li><i class="fas fa-check"></i> Mobile Responsive</li>
-          <li><i class="fas fa-check"></i> Contact Form</li>
-          <li><i class="fas fa-check"></i> Basic SEO Setup</li>
-          <li><i class="fas fa-check"></i> 7 Days Support</li>
-        </ul>
-        <a href="https://wa.me/2348057871328" class="btn-pricing" target="_blank">Get Started</a>
-      </div>
-
-      <div class="pricing-card popular fade-in">
-        <div class="popular-badge">⭐ Most Popular</div>
-        <div class="pricing-icon">🚀</div>
-        <div class="pricing-name">BUSINESS</div>
-        <div class="pricing-price">
-          <span class="currency">₦</span>
-          <span class="amount">60,000</span>
-        </div>
-        <ul class="pricing-features">
-          <li><i class="fas fa-check"></i> Up to 5 Pages</li>
-          <li><i class="fas fa-check"></i> Mobile Responsive</li>
-          <li><i class="fas fa-check"></i> Contact Form</li>
-          <li><i class="fas fa-check"></i> Full SEO Setup</li>
-          <li><i class="fas fa-check"></i> WhatsApp Integration</li>
-          <li><i class="fas fa-check"></i> 30 Days Support</li>
-        </ul>
-        <a href="https://wa.me/2348057871328" class="btn-pricing" target="_blank">Get Started</a>
-      </div>
-
-      <div class="pricing-card fade-in">
-        <div class="pricing-icon">💎</div>
-        <div class="pricing-name">PREMIUM</div>
-        <div class="pricing-price">
-          <span class="currency">₦</span>
-          <span class="amount">120,000</span>
-        </div>
-        <ul class="pricing-features">
-          <li><i class="fas fa-check"></i> Unlimited Pages</li>
-          <li><i class="fas fa-check"></i> AI-Powered Features</li>
-          <li><i class="fas fa-check"></i> Advanced Animations</li>
-          <li><i class="fas fa-check"></i> Full SEO + Analytics</li>
-          <li><i class="fas fa-check"></i> Payment Integration</li>
-          <li><i class="fas fa-check"></i> 90 Days Support</li>
-        </ul>
-        <a href="https://wa.me/2348057871328" class="btn-pricing" target="_blank">Get Started</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials" id="testimonials">
-  <div class="container">
-    <h2 class="section-title">Client <span>Reviews</span></h2>
-    <p class="section-sub">What my clients say about working with me</p>
-    <div class="testimonials-grid">
-
-      <div class="testimonial-card fade-in">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Favour built us an incredible website that completely transformed our online presence. Professional, fast, and very easy to work with. Highly recommend!"</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">CO</div>
-          <div class="author-info">
-            <h4>Chukwuemeka Obi</h4>
-            <p>Business Owner — Lagos</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card fade-in">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"The website Favour created for my business exceeded all my expectations. It looks amazing on my phone and my customers love it. Worth every naira!"</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">AS</div>
-          <div class="author-info">
-            <h4>Amina Suleiman</h4>
-            <p>Entrepreneur — Abuja</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card fade-in">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Very talented designer! Favour understood exactly what I wanted and delivered a modern, beautiful website on time. I will definitely use DevByFavour again!"</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">BE</div>
-          <div class="author-info">
-            <h4>Blessing Eze</h4>
-            <p>CEO — Port Harcourt</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="container">
-    <h2 class="section-title">Get In <span>Touch</span></h2>
-    <p class="section-sub">Ready to build something amazing? Let's talk about your project today!</p>
-    <div class="contact-cards">
-      <div class="contact-card fade-in">
-        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-        <h3>Email</h3>
-        <p>devbyfavour@gmail.com</p>
-      </div>
-      <div class="contact-card fade-in">
-        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-        <h3>WhatsApp</h3>
-        <p>+2348057871328</p>
-      </div>
-      <div class="contact-card fade-in">
-        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-        <h3>Location</h3>
-        <p>Benin City, Edo State, Nigeria</p>
+  <section class="counters-section">
+    <div class="container">
+      <div class="counters-grid">
+        <div class="counter-item fade-up"><span class="counter-num" data-target="30">0</span><span class="counter-lbl">Projects Completed</span></div>
+        <div class="counter-item fade-up"><span class="counter-num" data-target="25">0</span><span class="counter-lbl">Happy Clients</span></div>
+        <div class="counter-item fade-up"><span class="counter-num" data-target="3">0</span><span class="counter-lbl">Years Experience</span></div>
+        <div class="counter-item fade-up"><span class="counter-num" data-target="100">0</span><span class="counter-lbl">Satisfaction Rate %</span></div>
       </div>
     </div>
-    <a href="https://wa.me/2348057871328" class="btn-whatsapp" target="_blank">
-      <i class="fab fa-whatsapp"></i> Start Your Project on WhatsApp
-    </a>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="#home" class="logo">Dev<span>By</span>Favour</a>
-        <p>Building futuristic websites for modern businesses in Nigeria. Professional web design powered by AI and cutting-edge technology.</p>
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header fade-up"><div class="section-badge">Testimonials</div><h2 class="section-title">What Clients <span>Say About Me</span></h2></div>
+      <div class="testimonials-track-wrap">
+        <div class="testimonials-track" id="tl-track">
+          <div class="testimonial-card"><div class="stars">★★★★★</div><p class="testimonial-text">"Favour delivered an absolutely stunning website for my business. The attention to detail and the speed of delivery was exceptional. My sales increased by 40% in the first month!"</p><div class="testimonial-author"><div class="author-avatar">AM</div><div><div class="author-name">Adaobi Mgbeokwere</div><div class="author-role">CEO, FashionHub Nigeria</div></div></div></div>
+          <div class="testimonial-card"><div class="stars">★★★★★</div><p class="testimonial-text">"Best investment I made for my business. The website Favour built for my clinic looks like it belongs to a Fortune 500 company. Professional, fast, and affordable!"</p><div class="testimonial-author"><div class="author-avatar">DI</div><div><div class="author-name">Dr. Emeka Ihejirika</div><div class="author-role">Medical Director, MediCare Pro</div></div></div></div>
+          <div class="testimonial-card"><div class="stars">★★★★★</div><p class="testimonial-text">"From concept to launch in just 5 days! Favour has a gift for turning your vision into something beyond what you imagined. Highly recommend for any serious business."</p><div class="testimonial-author"><div class="author-avatar">KO</div><div><div class="author-name">Kelechi Okonkwo</div><div class="author-role">Founder, TechVentures Lagos</div></div></div></div>
+          <div class="testimonial-card"><div class="stars">★★★★★</div><p class="testimonial-text">"Favour understood my brand immediately. The landing page he designed for my product launch generated 200+ leads in the first week. Absolute genius at work!"</p><div class="testimonial-author"><div class="author-avatar">PN</div><div><div class="author-name">Precious Nwachukwu</div><div class="author-role">Entrepreneur, Abuja</div></div></div></div>
+        </div>
       </div>
-      <div>
-        <h4 class="footer-title">Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-title">Services</h4>
-        <ul class="footer-links">
-          <li><a href="#services">Website Design</a></li>
-          <li><a href="#services">AI Websites</a></li>
-          <li><a href="#services">Landing Pages</a></li>
-          <li><a href="#services">SEO Setup</a></li>
-          <li><a href="#services">Maintenance</a></li>
-        </ul>
+      <div class="testimonials-nav"><button class="t-nav-btn" id="tl-prev">←</button><button class="t-nav-btn" id="tl-next">→</button></div>
+    </div>
+  </section>
+
+  <section class="tech-stack">
+    <div class="container">
+      <div class="section-header fade-up"><div class="section-badge">Tech Stack</div><h2 class="section-title">Tools & <span>Technologies</span></h2></div>
+      <div class="tech-grid fade-up">
+        <div class="tech-chip"><span>⚡</span><span>HTML5</span></div><div class="tech-chip"><span>🎨</span><span>CSS3</span></div><div class="tech-chip"><span>🟨</span><span>JavaScript</span></div><div class="tech-chip"><span>⚛️</span><span>React</span></div><div class="tech-chip"><span>🤖</span><span>Claude AI</span></div><div class="tech-chip"><span>🔮</span><span>OpenAI</span></div><div class="tech-chip"><span>🌊</span><span>Tailwind CSS</span></div><div class="tech-chip"><span>🛒</span><span>Shopify</span></div><div class="tech-chip"><span>📐</span><span>Figma</span></div><div class="tech-chip"><span>🔥</span><span>Firebase</span></div><div class="tech-chip"><span>🖥️</span><span>WordPress</span></div><div class="tech-chip"><span>📊</span><span>Google Analytics</span></div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 <span>DevByFavour</span>. All rights reserved.</p>
-      <p>Built with 💙 in <span>Benin City, Nigeria</span></p>
+  </section>
+
+  <section class="process-section">
+    <div class="container">
+      <div class="section-header fade-up"><div class="section-badge">My Process</div><h2 class="section-title">How I <span>Work</span></h2><p class="section-sub">A streamlined workflow to deliver excellence from brief to launch.</p></div>
+      <div class="process-steps">
+        <div class="process-step fade-up"><div class="step-num">01</div><h3>Discovery</h3><p>We discuss your goals, audience, brand, and vision to establish a clear project brief.</p></div>
+        <div class="process-step fade-up"><div class="step-num">02</div><h3>Strategy</h3><p>I craft a design strategy, sitemap, and wireframes aligned with your business objectives.</p></div>
+        <div class="process-step fade-up"><div class="step-num">03</div><h3>Design</h3><p>Your brand comes to life with a stunning, pixel-perfect design crafted with care.</p></div>
+        <div class="process-step fade-up"><div class="step-num">04</div><h3>Build</h3><p>Clean, fast, and SEO-optimized code — bringing the design into a live, functional website.</p></div>
+        <div class="process-step fade-up"><div class="step-num">05</div><h3>Launch</h3><p>Go live with full support, testing, and post-launch assistance to ensure everything is perfect.</p></div>
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Dev<span>By</span>Favour<span class="logo-dot">.</span></div>
+          <p>Building futuristic digital experiences from Benin City, Nigeria. Premium websites powered by AI and cutting-edge design.</p>
+          <!-- ⚠️ TODO: Replace "coming-soon" with your real usernames -->
+          <div class="footer-social" style="margin-top:20px;">
+            <a href="https://wa.me/2348057871328" target="_blank" class="social-btn" title="WhatsApp">💬</a>
+            <a href="mailto:devbyfavour@gmail.com" class="social-btn" title="Email">📧</a>
+            <a href="https://instagram.com/coming-soon" target="_blank" class="social-btn" title="Instagram">📸</a>
+            <a href="https://tiktok.com/@coming-soon" target="_blank" class="social-btn" title="TikTok">🎵</a>
+            <a href="https://x.com/coming-soon" target="_blank" class="social-btn" title="X / Twitter">𝕏</a>
+            <a href="https://linkedin.com/in/coming-soon" target="_blank" class="social-btn" title="LinkedIn">in</a>
+            <a href="https://github.com/coming-soon" target="_blank" class="social-btn" title="GitHub">🐙</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Navigation</h4><ul><li><a href="#" onclick="navigateTo('home')">Home</a></li><li><a href="#" onclick="navigateTo('about')">About</a></li><li><a href="#" onclick="navigateTo('services')">Services</a></li><li><a href="#" onclick="navigateTo('portfolio')">Portfolio</a></li><li><a href="#" onclick="navigateTo('contact')">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="#">Website Design</a></li><li><a href="#">AI Websites</a></li><li><a href="#">eCommerce</a></li><li><a href="#">Landing Pages</a></li><li><a href="#">SEO</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:devbyfavour@gmail.com">devbyfavour@gmail.com</a></li><li><a href="https://wa.me/2348057871328">+234 805 787 1328</a></li><li><a href="#">Benin City, Nigeria</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <span>DevByFavour</span>. All rights reserved. Built with 💙 in Benin City.</p>
+        <p style="color:var(--silver);font-size:13px;">Designed & Developed by <span>Favour Medunah</span></p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ABOUT PAGE -->
+<div class="page" id="page-about">
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-hero-content">
+        <div class="about-photo-wrap fade-left"><div class="about-photo-frame"><div class="about-photo-glow"></div>👨‍💻</div></div>
+        <div class="about-info fade-right">
+          <div class="section-badge">About Me</div>
+          <h1>I'm <span>Favour Medunah</span><br>Web Designer & AI Dev</h1>
+          <p>I'm a passionate web designer and AI developer from Benin City, Edo State, Nigeria. I specialize in building modern, professional websites that help businesses make a powerful first impression online.</p>
+          <p>I combine clean code, beautiful design, and the power of AI to deliver websites that are not just visually stunning — but fast, functional, and results-driven.</p>
+          <div class="about-chips"><span class="about-chip">Web Design</span><span class="about-chip">AI Integration</span><span class="about-chip">UI/UX</span><span class="about-chip">SEO</span><span class="about-chip">eCommerce</span><span class="about-chip">Performance</span></div>
+          <div style="margin-top:30px;display:flex;gap:16px;flex-wrap:wrap">
+            <a href="https://wa.me/2348057871328?text=Hi%20Favour!%20I%27d%20like%20to%20work%20with%20you.%20Can%20we%20discuss%20my%20project%3F" target="_blank" class="btn-primary"><span>Work With Me</span></a>
+            <a href="#" class="btn-secondary" onclick="navigateTo('portfolio')">My Portfolio →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mission-vision">
+    <div class="container">
+      <div class="section-header fade-up"><div class="section-badge">Purpose</div><h2 class="section-title">Mission & <span>Vision</span></h2></div>
+      <div class="mv-grid">
+        <div class="mv-card fade-left"><div class="mv-icon">🎯</div><h3>My Mission</h3><p>To empower businesses and entrepreneurs with world-class digital presence — combining futuristic design, AI technology, and conversion-focused strategy to drive real, measurable growth for every client.</p></div>
+        <div class="mv-card fade-right"><div class="mv-icon">🔭</div><h3>My Vision</h3><p>To become Africa's most trusted premium web designer, building a legacy of excellence — where every website I create stands as a testament to innovation, beauty, and functionality at its finest.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-header fade-up"><div class="section-badge">Journey</div><h2 class="section-title">My <span>Timeline</span></h2></div>
+      <div class="timeline">
+        <div class="tl-item fade-up"><div class="tl-left"><div class="tl-year">2021</div><div class="tl-title">The Beginning</div><div class="tl-desc">Started learning HTML, CSS and JavaScript through self-study and online courses.</div></div><div class="tl-dot"></div><div class="tl-right"></div></div>
+        <div class="tl-item fade-up"><div class="tl-left"></div><div class="tl-dot"></div><div class="tl-right"><div class="tl-year">2022</div><div class="tl-title">First Clients</div><div class="tl-desc">Built first paid websites for local businesses in Benin City. Discovered my passion for premium design.</div></div></div>
+        <div class="tl-item fade-up"><div class="tl-left"><div class="tl-year">2023</div><div class="tl-title">AI Integration</div><div class="tl-desc">Began integrating AI tools and APIs into web projects, elevating client outcomes significantly.</div></div><div class="tl-dot"></div><div class="tl-right"></div></div>
+        <div class="tl-item fade-up"><div class="tl-left"></div><div class="tl-dot"></div><div class="tl-right"><div class="tl-year">2024</div><div class="tl-title">DevByFavour Brand</div><div class="tl-desc">Launched the DevByFavour brand officially. Expanded client base across Nigeria and beyond.</div></div></div>
+        <div class="tl-item fade-up"><div class="tl-left"><div class="tl-year">2025–Now</div><div class="tl-title">Premium Focus</div><div class="tl-desc">Elevated to premium positioning — serving ambitious businesses and startups with award-level digital work.</div></div><div class="tl-dot"></div><div class="tl-right"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-section">
+    <div class="container">
+      <div class="section-header fade-up"><div class="section-badge">Expertise</div><h2 class="section-title">Skills & <span>Proficiency</span></h2></div>
+      <div class="skills-grid">
+        <div class="skill-item fade-up"><div class="skill-head"><span class="skill-name">HTML & CSS</span><span class="skill-pct">97%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="97"></div></div></div>
+        <div class="skill-item fade-up"><div class="skill-head"><span class="skill-name">JavaScript</span><span class="skill-pct">88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="88"></div></div></div>
+        <div class="skill-item fade-up"><div class="skill-head"><span class="skill-name">UI/UX Design</span><span class="skill-pct">92%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="92"></div></div></div>
+        <div class="skill-item fade-up"><div class="skill-head"><span class="skill-name">React</span><span class="skill-pct">78%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="78"></div></div></div>
+        <div class="skill-item fade-up"><div class="skill-head"><span class="skill-name">AI Integration</span><span class="skill-pct">90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="90"></div></div></div>
+        <div class="skill-item fade-up"><div class="skill-head"><span class="skill-name">SEO Optimization</span><span class="skill-pct">85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="85"></div></div></div>
+        <div class="skill-item fade-up"><div class="skill-head"><span class="skill-name">eCommerce (Shopify)</span><span class="skill-pct">82%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="82"></div></div></div>
+        <div class="skill-item fade-up"><div class="skill-head"><span class="skill-name">WordPress</span><span class="skill-pct">88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="88"></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="achievements-section">
+    <div class="container">
+      <div class="section-header fade-up"><div class="section-badge">Achievements</div><h2 class="section-title">Why Clients <span>Trust Me</span></h2></div>
+      <div class="achievements-grid">
+        <div class="ach-card fade-up"><div class="ach-icon">⚡</div><div class="ach-text"><h3>Lightning Fast Delivery</h3><p>Most projects delivered in 5–10 business days without compromising quality or attention to detail.</p></div></div>
+        <div class="ach-card fade-up"><div class="ach-icon">🏆</div><div class="ach-text"><h3>100% Satisfaction Rate</h3><p>Every single client has walked away satisfied. No exceptions. Client happiness is my #1 priority.</p></div></div>
+        <div class="ach-card fade-up"><div class="ach-icon">🔒</div><div class="ach-text"><h3>Transparent Communication</h3><p>Regular updates, clear timelines, and honest communication throughout every single project.</p></div></div>
+        <div class="ach-card fade-up"><div class="ach-icon">🛡️</div><div class="ach-text"><h3>Post-Launch Support</h3><p>I don't disappear after launch. Free support and maintenance for 30 days on every project.</p></div></div>
+        <div class="ach-card fade-up"><div class="ach-icon">📐</div><div class="ach-text"><h3>Pixel-Perfect Design</h3><p>Obsessive attention to detail — every spacing, color, and interaction crafted with intent.</p></div></div>
+        <div class="ach-card fade-up"><div class="ach-icon">🤖</div><div class="ach-text"><h3>AI-Enhanced Workflow</h3><p>Leveraging AI tools to deliver more creative, optimized solutions faster than traditional agencies.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="philosophy-section">
+    <div class="container">
+      <div class="section-header fade-up"><div class="section-badge">Philosophy</div><h2 class="section-title">Work <span>Philosophy</span></h2></div>
+      <div class="philosophy-grid">
+        <div class="phil-card fade-up"><div class="phil-num">01</div><h3>Design With Purpose</h3><p>Every design decision serves a goal — aesthetics must always serve function, conversion, and brand identity.</p></div>
+        <div class="phil-card fade-up"><div class="phil-num">02</div><h3>Speed Without Sacrifice</h3><p>Fast delivery should never mean cutting corners. Excellence and efficiency can — and must — coexist.</p></div>
+        <div class="phil-card fade-up"><div class="phil-num">03</div><h3>Client as Partner</h3><p>I treat every client as a long-term partner. Your success is my success — that drives everything I do.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0">
+        <p>© 2026 <span>DevByFavour</span>. All rights reserved.</p>
+        <!-- ⚠️ TODO: Replace "coming-soon" with your real usernames -->
+        <div class="footer-social">
+          <a href="https://wa.me/2348057871328" target="_blank" class="social-btn" title="WhatsApp">💬</a>
+          <a href="mailto:devbyfavour@gmail.com" class="social-btn" title="Email">📧</a>
+          <a href="https://instagram.com/coming-soon" target="_blank" class="social-btn" title="Instagram">📸</a>
+          <a href="https://tiktok.com/@coming-soon" target="_blank" class="social-btn" title="TikTok">🎵</a>
+          <a href="https://x.com/coming-soon" target="_blank" class="social-btn" title="X / Twitter">𝕏</a>
+          <a href="https://linkedin.com/in/coming-soon" target="_blank" class="social-btn" title="LinkedIn">in</a>
+          <a href="https://github.com/coming-soon" target="_blank" class="social-btn" title="GitHub">🐙</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- SERVICES PAGE -->
+<div class="page" id="page-services">
+  <section class="services-hero">
+    <div class="container">
+      <div class="section-badge fade-up">Services</div>
+      <h1 class="section-title fade-up">Premium Digital <span>Services</span></h1>
+      <p class="section-sub fade-up">Tailored solutions to launch, grow, and scale your digital presence — built for results.</p>
+    </div>
+  </section>
+
+  <section class="services-detail">
+    <div class="container">
+      <div class="services-detail-grid">
+        <div class="svc-detail-card fade-up"><div class="svc-detail-icon">🌐</div><h3>Custom Website Design</h3><p>Stunning, fully custom websites that reflect your brand identity and convert visitors into clients.</p><ul class="svc-features"><li>Fully custom design — no templates</li><li>Mobile-first, fully responsive</li><li>Page speed optimized (90+ score)</li><li>SEO-ready structure</li><li>Cross-browser compatible</li><li>30-day post-launch support</li></ul></div>
+        <div class="svc-detail-card fade-up"><div class="svc-detail-icon">🤖</div><h3>AI-Powered Websites</h3><p>Next-generation websites enhanced with artificial intelligence — chatbots, personalization, automation.</p><ul class="svc-features"><li>AI chatbot integration</li><li>Personalized user experiences</li><li>Automated content generation</li><li>Smart form & lead capture</li><li>AI-powered search</li><li>Analytics & behavioral tracking</li></ul></div>
+        <div class="svc-detail-card fade-up"><div class="svc-detail-icon">🛒</div><h3>eCommerce Development</h3><p>High-converting online stores built to sell — seamless checkout, payment integration, and management.</p><ul class="svc-features"><li>Shopify / WooCommerce setup</li><li>Product catalog design</li><li>Payment gateway integration</li><li>Inventory management system</li><li>Order tracking & notifications</li><li>Conversion rate optimization</li></ul></div>
+        <div class="svc-detail-card fade-up"><div class="svc-detail-icon">🚀</div><h3>Landing Page Design</h3><p>Laser-focused landing pages engineered to maximize conversions for your campaigns and launches.</p><ul class="svc-features"><li>Single-goal, conversion-focused</li><li>A/B testing ready</li><li>Lead capture forms</li><li>Email marketing integration</li><li>Fast-loading (under 2 seconds)</li><li>Analytics integration</li></ul></div>
+        <div class="svc-detail-card fade-up"><div class="svc-detail-icon">📈</div><h3>SEO Optimization</h3><p>Rank higher on Google and drive organic traffic. Technical SEO, on-page, and content strategy included.</p><ul class="svc-features"><li>Technical SEO audit & fixes</li><li>On-page SEO optimization</li><li>Keyword research & strategy</li><li>Schema markup implementation</li><li>Core Web Vitals optimization</li><li>Monthly ranking reports</li></ul></div>
+        <div class="svc-detail-card fade-up"><div class="svc-detail-icon">🔄</div><h3>Website Redesign</h3><p>Transform your outdated website into a modern, conversion-optimized digital masterpiece.</p><ul class="svc-features"><li>UX/UI audit & analysis</li><li>Content migration</li><li>Modern design overhaul</li><li>Performance improvements</li><li>SEO preservation strategy</li><li>Zero-downtime migration</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section">
+    <div class="container">
+      <div class="section-header fade-up"><div class="section-badge">Pricing</div><h2 class="section-title">Transparent <span>Pricing</span></h2><p class="section-sub">Premium quality at honest prices. No hidden fees, no surprises.</p></div>
+      <div class="pricing-grid">
+        <div class="pricing-card fade-left">
+          <div class="pricing-tier">Starter</div>
+          <div class="pricing-price">₦80k<span>/project</span></div>
+          <div class="pricing-desc">Perfect for individuals and small businesses needing a clean online presence.</div>
+          <ul class="pricing-features"><li><span class="check">✓</span> Up to 3 pages</li><li><span class="check">✓</span> Responsive design</li><li><span class="check">✓</span> Contact form</li><li><span class="check">✓</span> Basic SEO setup</li><li><span class="check">✓</span> 7-day delivery</li><li><span class="cross">✗</span> AI features</li><li><span class="cross">✗</span> eCommerce</li></ul>
+          <a href="#" class="btn-secondary" style="width:100%;text-align:center;justify-content:center" onclick="openPricingWA('Starter','80,000')">Get Started</a>
+        </div>
+        <div class="pricing-card featured fade-up">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-tier">Professional</div>
+          <div class="pricing-price">₦180k<span>/project</span></div>
+          <div class="pricing-desc">The complete package for growing businesses ready to dominate their market online.</div>
+          <ul class="pricing-features"><li><span class="check">✓</span> Up to 8 pages</li><li><span class="check">✓</span> Premium custom design</li><li><span class="check">✓</span> AI chatbot integration</li><li><span class="check">✓</span> Full SEO optimization</li><li><span class="check">✓</span> 10-day delivery</li><li><span class="check">✓</span> eCommerce ready</li><li><span class="check">✓</span> 30-day support</li></ul>
+          <a href="#" class="btn-primary" style="width:100%;text-align:center;justify-content:center" onclick="openPricingWA('Professional','180,000')"><span>Get Started</span></a>
+        </div>
+        <div class="pricing-card fade-right">
+          <div class="pricing-tier">Enterprise</div>
+          <div class="pricing-price">Custom<span>/project</span></div>
+          <div class="pricing-desc">For ambitious brands that demand the absolute best. Fully custom, fully yours.</div>
+          <ul class="pricing-features"><li><span class="check">✓</span> Unlimited pages</li><li><span class="check">✓</span> Full AI integration</li><li><span class="check">✓</span> eCommerce platform</li><li><span class="check">✓</span> Custom functionality</li><li><span class="check">✓</span> Priority delivery</li><li><span class="check">✓</span> 3-month support</li><li><span class="check">✓</span> Dedicated partnership</li></ul>
+          <a href="#" class="btn-secondary" style="width:100%;text-align:center;justify-content:center" onclick="openPricingWA('Enterprise','Custom Pricing')">Let's Talk</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header fade-up"><div class="section-badge">FAQ</div><h2 class="section-title">Frequently Asked <span>Questions</span></h2></div>
+      <div class="faq-list">
+        <div class="faq-item fade-up"><button class="faq-question">How long does a website take to build? <span class="faq-arrow">+</span></button><div class="faq-answer"><p>Depending on the complexity, most websites are delivered within 5–14 business days. Landing pages can be done in 3–5 days. I always provide a clear timeline at the start of every project.</p></div></div>
+        <div class="faq-item fade-up"><button class="faq-question">Do you work with clients outside Nigeria? <span class="faq-arrow">+</span></button><div class="faq-answer"><p>Absolutely! I work with clients across Africa and globally. All communication is done via WhatsApp, email, or video call, and payments can be made in Naira, USD, or other currencies.</p></div></div>
+        <div class="faq-item fade-up"><button class="faq-question">Will my website be mobile-friendly? <span class="faq-arrow">+</span></button><div class="faq-answer"><p>Yes — 100%. Every website I build is designed mobile-first. This means it looks and performs perfectly on smartphones, tablets, and desktops alike.</p></div></div>
+        <div class="faq-item fade-up"><button class="faq-question">What do I need to get started? <span class="faq-arrow">+</span></button><div class="faq-answer"><p>Just reach out! We start with a brief consultation to understand your goals, brand, and vision. From there, I'll provide a clear proposal and timeline. A 50% deposit starts the project.</p></div></div>
+        <div class="faq-item fade-up"><button class="faq-question">Do you provide hosting and domain? <span class="faq-arrow">+</span></button><div class="faq-answer"><p>I can help you set up hosting and a domain, or work with your existing providers. I'll guide you through the best options based on your budget and needs.</p></div></div>
+        <div class="faq-item fade-up"><button class="faq-question">Can you redesign my existing website? <span class="faq-arrow">+</span></button><div class="faq-answer"><p>Absolutely! Website redesigns are one of my specialties. I'll analyze your current site, identify what's working and what isn't, then create a modern, conversion-optimized redesign.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-inner fade-up">
+        <h2>Ready to Build Something <span style="background:linear-gradient(135deg,var(--blue-mid),var(--glow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Extraordinary?</span></h2>
+        <p>Let's turn your vision into a premium digital reality. Your dream website is one conversation away.</p>
+        <div class="cta-btns">
+          <a href="https://wa.me/2348057871328?text=Hi%20Favour!%20I%27d%20like%20to%20start%20a%20project%20with%20you.%20Can%20you%20send%20me%20more%20details%3F" target="_blank" class="btn-primary"><span>Start Your Project</span></a>
+          <a href="https://wa.me/2348057871328" target="_blank" class="btn-whatsapp">💬 WhatsApp Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0">
+        <p>© 2026 <span>DevByFavour</span>. All rights reserved.</p>
+        <!-- ⚠️ TODO: Replace "coming-soon" with your real usernames -->
+        <div class="footer-social">
+          <a href="https://wa.me/2348057871328" target="_blank" class="social-btn" title="WhatsApp">💬</a>
+          <a href="mailto:devbyfavour@gmail.com" class="social-btn" title="Email">📧</a>
+          <a href="https://instagram.com/coming-soon" target="_blank" class="social-btn" title="Instagram">📸</a>
+          <a href="https://tiktok.com/@coming-soon" target="_blank" class="social-btn" title="TikTok">🎵</a>
+          <a href="https://x.com/coming-soon" target="_blank" class="social-btn" title="X / Twitter">𝕏</a>
+          <a href="https://linkedin.com/in/coming-soon" target="_blank" class="social-btn" title="LinkedIn">in</a>
+          <a href="https://github.com/coming-soon" target="_blank" class="social-btn" title="GitHub">🐙</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- PORTFOLIO PAGE -->
+<div class="page" id="page-portfolio">
+  <section class="portfolio-hero">
+    <div class="container">
+      <div class="section-badge fade-up">Portfolio</div>
+      <h1 class="section-title fade-up">Work That <span>Speaks</span></h1>
+      <p class="section-sub fade-up">A curated showcase of premium digital experiences, built to inspire and convert.</p>
+    </div>
+  </section>
+
+  <section class="portfolio-filters">
+    <div class="container">
+      <div class="filter-bar fade-up">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="web">Web Design</button>
+        <button class="filter-btn" data-filter="ecommerce">eCommerce</button>
+        <button class="filter-btn" data-filter="landing">Landing Pages</button>
+        <button class="filter-btn" data-filter="ai">AI Websites</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-grid-section">
+    <div class="container">
+      <div class="portfolio-masonry" id="portfolio-grid">
+        <div class="port-card span-2 fade-up" data-cat="web"><div class="port-thumb" style="aspect-ratio:16/7"><div class="port-thumb-inner" style="font-size:80px">🏢</div><div class="port-overlay"><div class="port-overlay-title">TechVentures Lagos</div><a href="#" class="btn-glow" onclick="viewProjectWA(event)">View Project →</a></div></div><div class="port-info"><div class="port-cat">Corporate · Web Design</div><h3>TechVentures Lagos</h3><p>Full corporate website redesign for a leading Lagos tech investment firm. Modern, bold, and authoritative.</p></div></div>
+        <div class="port-card fade-up" data-cat="ecommerce"><div class="port-thumb"><div class="port-thumb-inner">🛍️</div><div class="port-overlay"><div class="port-overlay-title">FashionHub Nigeria</div><a href="#" class="btn-glow" onclick="viewProjectWA(event)">View Project →</a></div></div><div class="port-info"><div class="port-cat">eCommerce</div><h3>FashionHub Nigeria</h3><p>Premium fashion eCommerce store with AI-powered product recommendations and seamless checkout.</p></div></div>
+        <div class="port-card fade-up" data-cat="web"><div class="port-thumb"><div class="port-thumb-inner">🏥</div><div class="port-overlay"><div class="port-overlay-title">MediCare Pro</div><a href="#" class="btn-glow" onclick="viewProjectWA(event)">View Project →</a></div></div><div class="port-info"><div class="port-cat">Healthcare · Web Design</div><h3>MediCare Pro</h3><p>Complete healthcare platform with appointment booking, doctor profiles, and patient portal.</p></div></div>
+        <div class="port-card fade-up" data-cat="landing"><div class="port-thumb"><div class="port-thumb-inner">🚀</div><div class="port-overlay"><div class="port-overlay-title">LaunchPad Africa</div><a href="#" class="btn-glow" onclick="viewProjectWA(event)">View Project →</a></div></div><div class="port-info"><div class="port-cat">Landing Page</div><h3>LaunchPad Africa</h3><p>High-converting SaaS product launch landing page. Generated 500+ signups in week one.</p></div></div>
+        <div class="port-card fade-up" data-cat="ai"><div class="port-thumb"><div class="port-thumb-inner">🤖</div><div class="port-overlay"><div class="port-overlay-title">SmartBot Platform</div><a href="#" class="btn-glow" onclick="viewProjectWA(event)">View Project →</a></div></div><div class="port-info"><div class="port-cat">AI Website</div><h3>SmartBot Platform</h3><p>AI-powered customer service platform with natural language chatbot and analytics dashboard.</p></div></div>
+        <div class="port-card fade-up" data-cat="web"><div class="port-thumb"><div class="port-thumb-inner">🎵</div><div class="port-overlay"><div class="port-overlay-title">BeatMakers Nigeria</div><a href="#" class="btn-glow" onclick="viewProjectWA(event)">View Project →</a></div></div><div class="port-info"><div class="port-cat">Creative · Music</div><h3>BeatMakers Nigeria</h3><p>Immersive music production studio website with audio previews, artist profiles, and booking system.</p></div></div>
+        <div class="port-card span-2 fade-up" data-cat="ecommerce"><div class="port-thumb" style="aspect-ratio:16/7"><div class="port-thumb-inner" style="font-size:80px">🍔</div><div class="port-overlay"><div class="port-overlay-title">QuickBite Foods</div><a href="#" class="btn-glow" onclick="viewProjectWA(event)">View Project →</a></div></div><div class="port-info"><div class="port-cat">Food eCommerce · Delivery</div><h3>QuickBite Foods</h3><p>Modern food delivery eCommerce platform with real-time order tracking and mobile-first design.</p></div></div>
+        <div class="port-card fade-up" data-cat="landing"><div class="port-thumb"><div class="port-thumb-inner">📱</div><div class="port-overlay"><div class="port-overlay-title">AppFlow Landing</div><a href="#" class="btn-glow" onclick="viewProjectWA(event)">View Project →</a></div></div><div class="port-info"><div class="port-cat">Landing Page · App</div><h3>AppFlow Landing</h3><p>Stunning mobile app landing page with interactive demo previews and app store links.</p></div></div>
+        <div class="port-card fade-up" data-cat="ai"><div class="port-thumb"><div class="port-thumb-inner">📊</div><div class="port-overlay"><div class="port-overlay-title">DataViz Dashboard</div><a href="#" class="btn-glow" onclick="viewProjectWA(event)">View Project →</a></div></div><div class="port-info"><div class="port-cat">AI · SaaS Dashboard</div><h3>DataViz Dashboard</h3><p>AI-powered business analytics dashboard with real-time data visualization and reporting tools.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-stats">
+    <div class="container">
+      <div class="section-header fade-up"><div class="section-badge">Results</div><h2 class="section-title">Impact by the <span>Numbers</span></h2></div>
+      <div class="ps-grid">
+        <div class="ps-item fade-up"><div class="ps-num" data-target="30">0</div><div class="ps-lbl">Projects Completed</div></div>
+        <div class="ps-item fade-up"><div class="ps-num" data-target="40">0</div><div class="ps-lbl">Avg Revenue Boost %</div></div>
+        <div class="ps-item fade-up"><div class="ps-num" data-target="100">0</div><div class="ps-lbl">Client Satisfaction %</div></div>
+        <div class="ps-item fade-up"><div class="ps-num" data-target="5">0</div><div class="ps-lbl">Days Avg Delivery</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-inner fade-up">
+        <h2>Want Your Project Featured <span style="background:linear-gradient(135deg,var(--blue-mid),var(--glow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Here?</span></h2>
+        <p>Let's create something remarkable together. Your success story starts with a single message.</p>
+        <div class="cta-btns">
+          <a href="https://wa.me/2348057871328?text=Hi%20Favour!%20I%20saw%20your%20portfolio%20and%20I%27d%20love%20to%20start%20a%20project%20with%20you." target="_blank" class="btn-primary"><span>Start a Project</span></a>
+          <a href="https://wa.me/2348057871328" target="_blank" class="btn-whatsapp">💬 WhatsApp Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0">
+        <p>© 2026 <span>DevByFavour</span>. All rights reserved.</p>
+        <!-- ⚠️ TODO: Replace "coming-soon" with your real usernames -->
+        <div class="footer-social">
+          <a href="https://wa.me/2348057871328" target="_blank" class="social-btn" title="WhatsApp">💬</a>
+          <a href="mailto:devbyfavour@gmail.com" class="social-btn" title="Email">📧</a>
+          <a href="https://instagram.com/coming-soon" target="_blank" class="social-btn" title="Instagram">📸</a>
+          <a href="https://tiktok.com/@coming-soon" target="_blank" class="social-btn" title="TikTok">🎵</a>
+          <a href="https://x.com/coming-soon" target="_blank" class="social-btn" title="X / Twitter">𝕏</a>
+          <a href="https://linkedin.com/in/coming-soon" target="_blank" class="social-btn" title="LinkedIn">in</a>
+          <a href="https://github.com/coming-soon" target="_blank" class="social-btn" title="GitHub">🐙</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- CONTACT PAGE -->
+<div class="page" id="page-contact">
+  <section class="contact-hero">
+    <div class="container">
+      <div class="section-badge fade-up">Get In Touch</div>
+      <h1 class="section-title fade-up">Let's Build Something <span>Amazing</span></h1>
+      <p class="section-sub fade-up">Ready to transform your online presence? I'm just a message away. Let's make it happen.</p>
+    </div>
+  </section>
+
+  <section class="contact-main">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-info-side">
+          <div class="contact-info-item fade-left"><div class="ci-icon">📧</div><div class="ci-text"><h4>Email Me</h4><p><a href="mailto:devbyfavour@gmail.com">devbyfavour@gmail.com</a></p></div></div>
+          <div class="contact-info-item fade-left"><div class="ci-icon">💬</div><div class="ci-text"><h4>WhatsApp</h4><p><a href="https://wa.me/2348057871328" target="_blank">+234 805 787 1328</a></p></div></div>
+          <div class="contact-info-item fade-left"><div class="ci-icon">📍</div><div class="ci-text"><h4>Location</h4><p>Benin City, Edo State, Nigeria</p></div></div>
+          <div class="contact-info-item fade-left"><div class="ci-icon">⚡</div><div class="ci-text"><h4>Response Time</h4><p>Within 2–4 hours (business hours)</p></div></div>
+          <div class="social-connect fade-left">
+            <h4>Find Me Online</h4>
+            <!-- ⚠️ TODO: Replace "coming-soon" with your real usernames -->
+            <div class="social-links">
+              <a href="https://wa.me/2348057871328" target="_blank" class="social-link">💬 WhatsApp</a>
+              <a href="mailto:devbyfavour@gmail.com" class="social-link">📧 Email</a>
+              <a href="https://instagram.com/coming-soon" target="_blank" class="social-link">📸 Instagram</a>
+              <a href="https://tiktok.com/@coming-soon" target="_blank" class="social-link">🎵 TikTok</a>
+              <a href="https://x.com/coming-soon" target="_blank" class="social-link">𝕏 Twitter / X</a>
+              <a href="https://linkedin.com/in/coming-soon" target="_blank" class="social-link">in LinkedIn</a>
+              <a href="https://github.com/coming-soon" target="_blank" class="social-link">🐙 GitHub</a>
+            </div>
+          </div>
+          <div class="hours-card fade-left">
+            <h4>Business Hours</h4>
+            <div class="hours-row"><span class="day">Monday – Friday</span><span class="time">8:00 AM – 8:00 PM</span></div>
+            <div class="hours-row"><span class="day">Saturday</span><span class="time">10:00 AM – 5:00 PM</span></div>
+            <div class="hours-row"><span class="day">Sunday</span><span class="time">Emergency Only</span></div>
+          </div>
+        </div>
+        <div class="contact-form-side fade-right">
+          <div class="contact-form-wrap">
+            <h3 class="form-title">Send a Message</h3>
+            <p class="form-sub">Fill in the details below — clicking Send will open WhatsApp with everything pre-filled. 💬</p>
+            <div class="form-row">
+              <div class="form-group"><label>First Name</label><input type="text" placeholder="Emeka" id="f-firstname"/></div>
+              <div class="form-group"><label>Last Name</label><input type="text" placeholder="Okonkwo" id="f-lastname"/></div>
+            </div>
+            <div class="form-group"><label>Email Address</label><input type="email" placeholder="emeka@company.com" id="f-email"/></div>
+            <div class="form-group"><label>Phone / WhatsApp</label><input type="tel" placeholder="+234 800 000 0000" id="f-phone"/></div>
+            <div class="form-group">
+              <label>Service Needed</label>
+              <select id="f-service"><option value="">Select a service...</option><option>Custom Website Design</option><option>AI-Powered Website</option><option>eCommerce Store</option><option>Landing Page</option><option>SEO Optimization</option><option>Website Redesign</option><option>Other</option></select>
+            </div>
+            <div class="form-group">
+              <label>Project Budget</label>
+              <select id="f-budget"><option value="">Select budget range...</option><option>₦50k – ₦100k</option><option>₦100k – ₦200k</option><option>₦200k – ₦500k</option><option>₦500k+</option><option>Let's Discuss</option></select>
+            </div>
+            <div class="form-group"><label>Project Details</label><textarea id="f-message" placeholder="Tell me about your project, goals, timeline, and anything else I should know..."></textarea></div>
+            <button class="btn-primary form-submit" id="form-submit-btn" onclick="submitForm()"><span>Send via WhatsApp 💬</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking-section">
+    <div class="container">
+      <div class="section-header fade-up"><div class="section-badge">Book a Call</div><h2 class="section-title">Schedule a Free <span>Consultation</span></h2></div>
+      <div class="booking-card fade-up">
+        <div style="font-size:60px;margin-bottom:20px">📅</div>
+        <h3>Free 30-Minute Strategy Call</h3>
+        <p>Book a free consultation call where we'll discuss your project, goals, and how I can help you achieve them. No pressure, just value.</p>
+        <a href="https://wa.me/2348057871328?text=Hi%20Favour,%20I'd%20like%20to%20book%20a%20free%20consultation%20call!" target="_blank" class="btn-primary" style="display:inline-flex"><span>Book via WhatsApp →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <div class="container">
+      <div class="section-header fade-up"><div class="section-badge">Location</div><h2 class="section-title">Based in <span>Benin City</span></h2></div>
+      <div class="map-wrap fade-up"><div class="map-placeholder"><div style="font-size:64px;margin-bottom:20px">🗺️</div><h3>Benin City, Edo State, Nigeria</h3><p>Serving clients locally & globally — wherever great design is needed.</p></div></div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-inner fade-up">
+        <h2>Don't Wait — <span style="background:linear-gradient(135deg,var(--blue-mid),var(--glow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Start Today</span></h2>
+        <p>Every day without a premium website is a day your competitors get ahead. Let's fix that — now.</p>
+        <div class="cta-btns">
+          <a href="https://wa.me/2348057871328" target="_blank" class="btn-whatsapp">💬 Chat on WhatsApp</a>
+          <a href="mailto:devbyfavour@gmail.com" class="btn-secondary">📧 Send Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0">
+        <p>© 2026 <span>DevByFavour</span>. All rights reserved. Built with 💙 in Benin City.</p>
+        <!-- ⚠️ TODO: Replace "coming-soon" with your real usernames -->
+        <div class="footer-social">
+          <a href="https://wa.me/2348057871328" target="_blank" class="social-btn" title="WhatsApp">💬</a>
+          <a href="mailto:devbyfavour@gmail.com" class="social-btn" title="Email">📧</a>
+          <a href="https://instagram.com/coming-soon" target="_blank" class="social-btn" title="Instagram">📸</a>
+          <a href="https://tiktok.com/@coming-soon" target="_blank" class="social-btn" title="TikTok">🎵</a>
+          <a href="https://x.com/coming-soon" target="_blank" class="social-btn" title="X / Twitter">𝕏</a>
+          <a href="https://linkedin.com/in/coming-soon" target="_blank" class="social-btn" title="LinkedIn">in</a>
+          <a href="https://github.com/coming-soon" target="_blank" class="social-btn" title="GitHub">🐙</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
 
 <script>
-// ==========================================
-// DEVBYFAVOUR - COMPLETE JAVASCRIPT
-// ==========================================
+const loader=document.getElementById('loader');
+const loaderPct=document.getElementById('loader-pct');
+let pct=0;
+const loaderInterval=setInterval(()=>{
+  pct=Math.min(pct+Math.random()*12,100);
+  loaderPct.textContent=Math.floor(pct)+'%';
+  if(pct>=100){clearInterval(loaderInterval);setTimeout(()=>{loader.classList.add('hidden');initAnimations();},300);}
+},80);
 
-// --- PARTICLES ---
-const canvas = document.getElementById('particles');
-const ctx = canvas.getContext('2d');
+const dot=document.getElementById('cursor-dot');
+const ring=document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+function animateCursor(){dot.style.left=mx+'px';dot.style.top=my+'px';rx+=(mx-rx)*0.14;ry+=(my-ry)*0.14;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animateCursor);}
+animateCursor();
+document.addEventListener('mouseover',e=>{if(e.target.matches('a,button,.svc-card,.port-card,.filter-btn,.faq-question,.t-nav-btn,.pricing-card,.ach-card,.tech-chip,.social-btn,.testimonial-card'))document.body.classList.add('hovering');});
+document.addEventListener('mouseout',e=>{if(e.target.matches('a,button,.svc-card,.port-card,.filter-btn,.faq-question,.t-nav-btn,.pricing-card,.ach-card,.tech-chip,.social-btn,.testimonial-card'))document.body.classList.remove('hovering');});
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-window.addEventListener('resize', () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+const progressBar=document.getElementById('scroll-progress');
+window.addEventListener('scroll',()=>{
+  const total=document.documentElement.scrollHeight-window.innerHeight;
+  progressBar.style.width=(window.scrollY/total*100)+'%';
+  document.getElementById('header').classList.toggle('scrolled',window.scrollY>50);
 });
 
-const particlesArray = [];
-const numberOfParticles = 70;
-
-class Particle {
-  constructor() { this.reset(); }
-  reset() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 2 + 0.5;
-    this.speedX = (Math.random() - 0.5) * 0.4;
-    this.speedY = (Math.random() - 0.5) * 0.4;
-    this.opacity = Math.random() * 0.4 + 0.1;
-    this.color = Math.random() > 0.5 ? '56, 189, 248' : '37, 99, 235';
-  }
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-  }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
-    ctx.fill();
-    particlesArray.forEach(other => {
-      const dx = this.x - other.x;
-      const dy = this.y - other.y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-      if (distance < 100) {
-        ctx.beginPath();
-        ctx.strokeStyle = `rgba(56, 189, 248, ${0.06 * (1 - distance / 100)})`;
-        ctx.lineWidth = 0.5;
-        ctx.moveTo(this.x, this.y);
-        ctx.lineTo(other.x, other.y);
-        ctx.stroke();
-      }
-    });
-  }
+function navigateTo(page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const target=document.getElementById('page-'+page);
+  if(target){target.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+  document.querySelectorAll('.nav-link').forEach(l=>l.classList.toggle('active',l.dataset.page===page));
+  setTimeout(()=>{initAnimations();initCounters();initSkillBars();},100);
+  document.getElementById('nav').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
 }
+document.querySelectorAll('.nav-link').forEach(link=>{link.addEventListener('click',e=>{e.preventDefault();navigateTo(link.dataset.page);});});
+document.getElementById('hamburger').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('nav').classList.toggle('open');});
 
-for (let i = 0; i < numberOfParticles; i++) {
-  particlesArray.push(new Particle());
+const typingEl=document.getElementById('typing-text');
+const words=['Favour Medunah','AI Developer','DevByFavour','Web Designer'];
+let wIdx=0,cIdx=0,deleting=false;
+function type(){
+  const word=words[wIdx];
+  typingEl.textContent=deleting?word.substring(0,cIdx-1):word.substring(0,cIdx+1);
+  deleting?cIdx--:cIdx++;
+  let speed=deleting?70:110;
+  if(!deleting&&cIdx===word.length){speed=1800;deleting=true;}
+  else if(deleting&&cIdx===0){deleting=false;wIdx=(wIdx+1)%words.length;speed=400;}
+  setTimeout(type,speed);
 }
+type();
 
-function animateParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particlesArray.forEach(p => { p.update(); p.draw(); });
+const canvas=document.getElementById('particles');
+const ctx=canvas.getContext('2d');
+function resizeCanvas(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
+resizeCanvas();
+window.addEventListener('resize',resizeCanvas);
+class Particle{constructor(){this.reset();}reset(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.size=Math.random()*1.8+0.3;this.vx=(Math.random()-0.5)*0.4;this.vy=(Math.random()-0.5)*0.4;this.opacity=Math.random()*0.45+0.05;this.color=Math.random()>0.5?'56,189,248':'29,78,216';}update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>canvas.width)this.vx*=-1;if(this.y<0||this.y>canvas.height)this.vy*=-1;}draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fillStyle=`rgba(${this.color},${this.opacity})`;ctx.fill();}}
+const particles=Array.from({length:90},()=>new Particle());
+let mouse={x:-999,y:-999};
+document.addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY;});
+function animateParticles(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  for(let i=0;i<particles.length;i++){
+    particles[i].update();particles[i].draw();
+    for(let j=i+1;j<particles.length;j++){const dx=particles[i].x-particles[j].x;const dy=particles[i].y-particles[j].y;const dist=Math.sqrt(dx*dx+dy*dy);if(dist<110){ctx.beginPath();ctx.strokeStyle=`rgba(56,189,248,${0.07*(1-dist/110)})`;ctx.lineWidth=0.5;ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.stroke();}}
+    const mdx=particles[i].x-mouse.x;const mdy=particles[i].y-mouse.y;const mdist=Math.sqrt(mdx*mdx+mdy*mdy);
+    if(mdist<150){ctx.beginPath();ctx.strokeStyle=`rgba(56,189,248,${0.15*(1-mdist/150)})`;ctx.lineWidth=0.8;ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(mouse.x,mouse.y);ctx.stroke();}
+  }
   requestAnimationFrame(animateParticles);
 }
 animateParticles();
 
-// --- TYPING ANIMATION ---
-const typingEl = document.getElementById('typing-text');
-const words = [
-  'Modern Businesses',
-  'Nigerian Brands',
-  'Startups & SMEs',
-  'Your Business'
-];
-
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-
-function type() {
-  const currentWord = words[wordIndex];
-  if (isDeleting) {
-    typingEl.textContent = currentWord.substring(0, charIndex - 1);
-    charIndex--;
-  } else {
-    typingEl.textContent = currentWord.substring(0, charIndex + 1);
-    charIndex++;
-  }
-  let typeSpeed = isDeleting ? 60 : 100;
-  if (!isDeleting && charIndex === currentWord.length) {
-    typeSpeed = 2000;
-    isDeleting = true;
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    wordIndex = (wordIndex + 1) % words.length;
-    typeSpeed = 400;
-  }
-  setTimeout(type, typeSpeed);
+function initAnimations(){
+  const observer=new IntersectionObserver((entries)=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*80);observer.unobserve(entry.target);}});},{threshold:0.12});
+  document.querySelectorAll('.fade-up,.fade-left,.fade-right,.scale-in').forEach(el=>{if(!el.classList.contains('visible'))observer.observe(el);});
 }
-type();
+function animateCounter(el){
+  const target=parseInt(el.dataset.target);
+  const suffix=el.textContent.includes('%')?'%':el.textContent.includes('+')?'+':'';
+  let current=0;const step=target/60;
+  const timer=setInterval(()=>{current=Math.min(current+step,target);el.textContent=Math.floor(current)+suffix;if(current>=target)clearInterval(timer);},20);
+}
+function initCounters(){
+  const cObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){animateCounter(entry.target);cObserver.unobserve(entry.target);}});},{threshold:0.5});
+  document.querySelectorAll('[data-target]').forEach(el=>cObserver.observe(el));
+}
+function initSkillBars(){
+  const sbObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.width=entry.target.dataset.pct+'%';sbObserver.unobserve(entry.target);}});},{threshold:0.4});
+  document.querySelectorAll('.skill-bar-fill').forEach(el=>sbObserver.observe(el));
+}
 
-// --- HAMBURGER MENU ---
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-let menuOpen = false;
+let tlIdx=0;
+const tlTrack=document.getElementById('tl-track');
+function updateTestimonials(){if(!tlTrack)return;const cardW=tlTrack.children[0]?tlTrack.children[0].offsetWidth+24:404;tlTrack.style.transform=`translateX(-${tlIdx*cardW}px)`;}
+document.getElementById('tl-next')?.addEventListener('click',()=>{const max=tlTrack?tlTrack.children.length-1:0;tlIdx=tlIdx<max?tlIdx+1:0;updateTestimonials();});
+document.getElementById('tl-prev')?.addEventListener('click',()=>{const max=tlTrack?tlTrack.children.length-1:0;tlIdx=tlIdx>0?tlIdx-1:max;updateTestimonials();});
+setInterval(()=>{if(tlTrack){const max=tlTrack.children.length-1;tlIdx=tlIdx<max?tlIdx+1:0;updateTestimonials();}},5000);
 
-hamburger.addEventListener('click', () => {
-  menuOpen = !menuOpen;
-  mobileMenu.style.display = menuOpen ? 'flex' : 'none';
-});
+document.addEventListener('click',e=>{const btn=e.target.closest('.faq-question');if(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(f=>f.classList.remove('open'));if(!isOpen)item.classList.add('open');}});
 
-// Close menu on link click
-document.querySelectorAll('.mobile-menu a').forEach(link => {
-  link.addEventListener('click', () => {
-    menuOpen = false;
-    mobileMenu.style.display = 'none';
-  });
-});
+document.addEventListener('click',e=>{const btn=e.target.closest('.filter-btn');if(btn){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const filter=btn.dataset.filter;document.querySelectorAll('.port-card').forEach(card=>{const cat=card.dataset.cat;if(filter==='all'||cat===filter){card.style.display='';setTimeout(()=>{card.style.opacity='1';card.style.transform='';},10);}else{card.style.opacity='0';card.style.transform='scale(0.9)';setTimeout(()=>{card.style.display='none';},300);}});}});
 
-// --- SMOOTH SCROLL ---
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
+// ── PRICING → WHATSAPP
+function openPricingWA(plan,price){
+  const msg=encodeURIComponent("Hi Favour! 👋\n\nI'm interested in the *"+plan+"* plan"+(price!=="Custom Pricing"?" (₦"+price+")" :"")+". \n\nI'd like to get started. Please send me more details about what's included and next steps. 🚀");
+  window.open("https://wa.me/2348057871328?text="+msg,"_blank");
+}
 
-// --- FADE IN ON SCROLL ---
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1 });
+// ── VIEW PROJECT → WHATSAPP
+function viewProjectWA(e){
+  e.preventDefault();
+  const card=e.target.closest('.port-card');
+  const title=card?(card.querySelector('.port-overlay-title')?.textContent||'this project'):'this project';
+  const msg=encodeURIComponent("Hi Favour! 👋\n\nI saw *"+title+"* in your portfolio and I'd love to learn more about it.\n\nCan you share more details or a live link? 🔗");
+  window.open("https://wa.me/2348057871328?text="+msg,"_blank");
+}
 
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+// ── CONTACT FORM → WHATSAPP (no emails sent)
+function submitForm(){
+  const firstName=document.getElementById('f-firstname')?.value.trim();
+  const lastName=document.getElementById('f-lastname')?.value.trim();
+  const email=document.getElementById('f-email')?.value.trim();
+  const phone=document.getElementById('f-phone')?.value.trim();
+  const service=document.getElementById('f-service')?.value;
+  const budget=document.getElementById('f-budget')?.value;
+  const message=document.getElementById('f-message')?.value.trim();
+  if(!firstName||!email||!message){alert('Please fill in your name, email, and project details.');return;}
+  const fullName=[firstName,lastName].filter(Boolean).join(' ');
+  const waText=
+    "📋 *NEW PROJECT ENQUIRY — DevByFavour*\n"+
+    "─────────────────────────────\n"+
+    "👤 *Name:* "+fullName+"\n"+
+    "📧 *Email:* "+email+"\n"+
+    (phone?"📱 *Phone/WhatsApp:* "+phone+"\n":"")+
+    (service?"🛠️ *Service Needed:* "+service+"\n":"")+
+    (budget?"💰 *Budget:* "+budget+"\n":"")+
+    "─────────────────────────────\n"+
+    "📝 *Project Details:*\n"+message+"\n"+
+    "─────────────────────────────\n"+
+    "Sent via DevByFavour website";
+  const btn=document.getElementById('form-submit-btn');
+  btn.innerHTML='<span>Opening WhatsApp... 💬</span>';
+  btn.disabled=true;
+  window.open("https://wa.me/2348057871328?text="+encodeURIComponent(waText),"_blank");
+  setTimeout(()=>{
+    btn.innerHTML='<span>Send via WhatsApp 💬</span>';
+    btn.disabled=false;
+    ['f-firstname','f-lastname','f-email','f-phone','f-message'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+    ['f-service','f-budget'].forEach(id=>{const el=document.getElementById(id);if(el)el.selectedIndex=0;});
+  },2000);
+}
 
-// --- ACTIVE NAV ON SCROLL ---
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-links a');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    if (window.scrollY >= section.offsetTop - 100) {
-      current = section.getAttribute('id');
-    }
-  });
-  navLinks.forEach(link => {
-    link.style.color = '';
-    if (link.getAttribute('href') === `#${current}`) {
-      link.style.color = '#38BDF8';
-    }
-  });
-});
+document.addEventListener('DOMContentLoaded',()=>{initAnimations();initCounters();initSkillBars();});
 </script>
-
 </body>
 </html>
